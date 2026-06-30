@@ -12,7 +12,7 @@ export const GEN4: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: ["jaehaerys-i", "alysanne"],
-    spouses: ["alyssa-t"],
+    spouses: [{ id: "alyssa-t", nome: "Alyssa Targaryen", corTexto: "#d4a0a0" }],
   },
   {
     id: "alyssa-t",
@@ -24,7 +24,7 @@ export const GEN4: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: ["jaehaerys-i", "alysanne"],
-    spouses: ["baelon"],
+    spouses: [{ id: "baelon", nome: "Baelon Targaryen", corTexto: "#c89b3c" }],
   },
   {
     id: "aegon-iii",
@@ -96,7 +96,9 @@ export const GEN4: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: ["jaehaerys-i", "alysanne"],
-    spouses: ["rodrik-arryn"],
+    spouses: [
+      { id: "rodrik-arryn", nome: "Rodrik Arryn", corTexto: "#90bcd4" },
+    ],
   },
   {
     id: "saera",

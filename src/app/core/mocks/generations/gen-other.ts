@@ -13,7 +13,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['baelon', 'alyssa-t'],
-    spouses: ['aemma-arryn']
+    spouses: [{ id: 'aemma-arryn', nome: 'Aemma Arryn', corTexto: '#90bcd4' }]
   },
   {
     id: 'aemma-arryn',
@@ -25,7 +25,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: [],
-    spouses: ['viserys-i']
+    spouses: [{ id: 'viserys-i', nome: 'Viserys I Targaryen', corTexto: '#c89b3c' }]
   },
   {
     id: 'daemon',
@@ -37,21 +37,21 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: ['baelon', 'alyssa-t'],
-    spouses: ['rhaenyra']
+    spouses: [{ id: 'rhaenyra', nome: 'Rhaenyra Targaryen', corTexto: '#d4a0a0' }]
   },
 
   // Generation 6
   {
     id: 'rhaenyra',
     name: 'Rhaenyra Targaryen',
-    title: 'The Realm\'s Delight',
+    title: "The Realm's Delight",
     house: 'Targaryen',
     gender: 'female',
     imageUrl: avatar('Rhaenyra', '1a0e0e'),
     isBastard: false,
     isKingOrQueen: true,
     parents: ['viserys-i', 'aemma-arryn'],
-    spouses: ['daemon']
+    spouses: [{ id: 'daemon', nome: 'Daemon Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 7
@@ -65,7 +65,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['daemon', 'rhaenyra'],
-    spouses: ['larra-rogare']
+    spouses: [{ id: 'larra-rogare', nome: 'Larra Rogare', corTexto: '#c09fd8' }]
   },
   {
     id: 'larra-rogare',
@@ -77,7 +77,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: [],
-    spouses: ['viserys-ii']
+    spouses: [{ id: 'viserys-ii', nome: 'Viserys II Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 8
@@ -91,7 +91,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['viserys-ii', 'larra-rogare'],
-    spouses: ['naerys']
+    spouses: [{ id: 'naerys', nome: 'Naerys Targaryen', corTexto: '#d4a0a0' }]
   },
   {
     id: 'naerys',
@@ -103,7 +103,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['viserys-ii', 'larra-rogare'],
-    spouses: ['aegon-iv']
+    spouses: [{ id: 'aegon-iv', nome: 'Aegon IV Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 9
@@ -117,7 +117,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['aegon-iv', 'naerys'],
-    spouses: ['myriah-martell']
+    spouses: [{ id: 'myriah-martell', nome: 'Myriah Martell', corTexto: '#d4a87a' }]
   },
   {
     id: 'myriah-martell',
@@ -129,7 +129,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: [],
-    spouses: ['daeron-ii']
+    spouses: [{ id: 'daeron-ii', nome: 'Daeron II Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 10
@@ -143,7 +143,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['daeron-ii', 'myriah-martell'],
-    spouses: ['dyanna-dayne']
+    spouses: [{ id: 'dyanna-dayne', nome: 'Dyanna Dayne', corTexto: '#c0b8e8' }]
   },
   {
     id: 'dyanna-dayne',
@@ -155,7 +155,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: [],
-    spouses: ['maekar-i']
+    spouses: [{ id: 'maekar-i', nome: 'Maekar I Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 11
@@ -169,7 +169,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['maekar-i', 'dyanna-dayne'],
-    spouses: ['betha-blackwood']
+    spouses: [{ id: 'betha-blackwood', nome: 'Betha Blackwood', corTexto: '#a8d5a2' }]
   },
   {
     id: 'betha-blackwood',
@@ -181,7 +181,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: [],
-    spouses: ['aegon-v']
+    spouses: [{ id: 'aegon-v', nome: 'Aegon V Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 12
@@ -195,7 +195,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['aegon-v', 'betha-blackwood'],
-    spouses: ['shaera']
+    spouses: [{ id: 'shaera', nome: 'Shaera Targaryen', corTexto: '#d4a0a0' }]
   },
   {
     id: 'shaera',
@@ -207,7 +207,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['aegon-v', 'betha-blackwood'],
-    spouses: ['jaehaerys-ii']
+    spouses: [{ id: 'jaehaerys-ii', nome: 'Jaehaerys II Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 13
@@ -221,7 +221,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['jaehaerys-ii', 'shaera'],
-    spouses: ['rhaella-gen13'] // renamed to avoid clash with Gen 4 rhaella
+    spouses: [{ id: 'rhaella-gen13', nome: 'Rhaella Targaryen', corTexto: '#d4a0a0' }]
   },
   {
     id: 'rhaella-gen13',
@@ -233,7 +233,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ['jaehaerys-ii', 'shaera'],
-    spouses: ['aerys-ii']
+    spouses: [{ id: 'aerys-ii', nome: 'Aerys II Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 14
@@ -247,7 +247,10 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: ['aerys-ii', 'rhaella-gen13'],
-    spouses: ['elia-martell', 'lyanna-stark']
+    spouses: [
+      { id: 'elia-martell', nome: 'Elia Martell', corTexto: '#d4a87a' },
+      { id: 'lyanna-stark', nome: 'Lyanna Stark', corTexto: '#8cb8d4' }
+    ]
   },
   {
     id: 'elia-martell',
@@ -259,7 +262,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: [],
-    spouses: ['rhaegar']
+    spouses: [{ id: 'rhaegar', nome: 'Rhaegar Targaryen', corTexto: '#c89b3c' }]
   },
   {
     id: 'lyanna-stark',
@@ -271,7 +274,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: [],
-    spouses: ['rhaegar']
+    spouses: [{ id: 'rhaegar', nome: 'Rhaegar Targaryen', corTexto: '#c89b3c' }]
   },
 
   // Generation 15
@@ -297,7 +300,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: [],
-    spouses: ['cersei-lannister']
+    spouses: [{ id: 'cersei-lannister', nome: 'Cersei Lannister', corTexto: '#c8a832' }]
   },
   {
     id: 'cersei-lannister',
@@ -309,7 +312,7 @@ export const GEN_OTHER: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: [],
-    spouses: ['robert-baratheon']
+    spouses: [{ id: 'robert-baratheon', nome: 'Robert Baratheon', corTexto: '#d4a87a' }]
   },
   {
     id: 'joffrey-baratheon',

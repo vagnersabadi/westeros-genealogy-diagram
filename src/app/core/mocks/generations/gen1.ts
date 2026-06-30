@@ -12,7 +12,10 @@ export const GEN1: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: [],
-    spouses: ["visenya", "rhaenys"],
+    spouses: [
+      { id: "visenya",  nome: "Visenya Targaryen",  corTexto: "#d4a0a0" },
+      { id: "rhaenys",  nome: "Rhaenys Targaryen",  corTexto: "#d4a0a0" },
+    ],
   },
   {
     id: "visenya",
@@ -24,7 +27,7 @@ export const GEN1: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: [],
-    spouses: ["aegon-i"],
+    spouses: [{ id: "aegon-i", nome: "Aegon I Targaryen", corTexto: "#c89b3c" }],
   },
   {
     id: "rhaenys",
@@ -36,6 +39,6 @@ export const GEN1: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: [],
-    spouses: ["aegon-i"],
+    spouses: [{ id: "aegon-i", nome: "Aegon I Targaryen", corTexto: "#c89b3c" }],
   }
 ];

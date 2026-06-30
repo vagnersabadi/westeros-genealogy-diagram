@@ -12,7 +12,7 @@ export const GEN3: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ["alyssa-velaryon"],
-    spouses: ["aegon-ii"],
+    spouses: [{ id: "aegon-ii", nome: "Aegon Targaryen", corTexto: "#c89b3c" }],
   },
   {
     id: "aegon-ii",
@@ -24,7 +24,7 @@ export const GEN3: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ["aenys-i", "alyssa-velaryon"],
-    spouses: ["rhaena"],
+    spouses: [{ id: "rhaena", nome: "Rhaena Targaryen", corTexto: "#d4a0a0" }],
   },
   {
     id: "jaehaerys-i",
@@ -36,7 +36,7 @@ export const GEN3: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ["aenys-i", "alyssa-velaryon"],
-    spouses: ["alysanne"],
+    spouses: [{ id: "alysanne", nome: "Alysanne Targaryen", corTexto: "#d4a0a0" }],
   },
   {
     id: "alysanne",
@@ -48,7 +48,7 @@ export const GEN3: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ["aenys-i", "alyssa-velaryon"],
-    spouses: ["jaehaerys-i"],
+    spouses: [{ id: "jaehaerys-i", nome: "Jaehaerys I Targaryen", corTexto: "#c89b3c" }],
   },
   {
     id: "viserys-i",

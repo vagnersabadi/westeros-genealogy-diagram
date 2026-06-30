@@ -5,7 +5,7 @@ import {
   type NgDiagramNodeTemplate,
   type Node,
 } from 'ng-diagram';
-import type { Character } from '../../../../core/models/character.model';
+import type { Character, Spouse } from '../../../../core/models/character.model';
 
 @Component({
   selector: 'app-character-node',
@@ -23,6 +23,6 @@ export class CharacterNode implements NgDiagramNodeTemplate {
   character = computed(() => this.node().data as Character);
   spousesList = computed(() => {
     const data = this.node().data as any;
-    return (data?.spousesList || []) as Character[];
+    return (data?.spousesList || []) as Spouse[];
   });
 }

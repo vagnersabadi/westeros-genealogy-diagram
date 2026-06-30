@@ -2,8 +2,8 @@
   @if (spousesList().length > 0) {
     <div class="c-node--spouses-list">
       @for (spouse of spousesList(); track spouse.id) {
-        <div class="c-node c-node--text-only" [class]="'house-' + spouse.house.toLowerCase()">
-          <div class="c-node__name">{{ spouse.name }}</div>
+        <div class="c-node c-node--text-only">
+          <div class="c-node__name" [style.color]="spouse.corTexto">{{ spouse.nome }}</div>
         </div>
       }
     </div>
