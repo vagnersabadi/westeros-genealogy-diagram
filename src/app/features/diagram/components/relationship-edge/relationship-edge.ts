@@ -33,13 +33,14 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
     if (edgeData.isChildConnection) {
       if (edgeData.isBastard) {
         return {
-          color: '#e85d04', // Dashed Pink/Orange
+          color: '#e85d04', // Dashed Orange for bastard lineage
           dash: '5 5',
           width: 2.5
         };
       }
+      // Use the per-mother color if provided, otherwise fallback to dark muted line
       return {
-        color: '#473d3d', // Muted dark line for descent
+        color: edgeData.motherColor || '#473d3d',
         dash: '',
         width: 1.5
       };

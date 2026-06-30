@@ -25,6 +25,19 @@ export function calculateLayout(
   const isSpouseOfActive = (id: string): boolean =>
     characters.some(c => c.spouses.some(s => s.id === id));
 
+  // Helper: generate a deterministic, visually distinct color from a mother's ID.
+  // Uses a simple hash → HSL palette with warm-toned hues to fit the dark medieval theme.
+  function motherColor(motherId: string): string {
+    // Hash the string to a number
+    let hash = 0;
+    for (let i = 0; i < motherId.length; i++) {
+      hash = (hash * 31 + motherId.charCodeAt(i)) & 0xffffffff;
+    }
+    // Map to a hue in 0-360, skip pure reds (0-20, 340-360) to avoid confusion with spouse lines
+    const hue = ((Math.abs(hash) % 300) + 20) % 360;
+    return `hsl(${hue}, 65%, 58%)`;
+  }
+
   // 2. Compute generations (depth)
   const depthMap = new Map<string, number>();
 
@@ -317,7 +330,8 @@ export function calculateLayout(
         isChildConnection: true,
         parentId: sourceParentId,
         childId: char.id,
-        isBastard: char.isBastard
+        isBastard: char.isBastard,
+        motherColor: char.isBastard ? null : motherColor(sourceParentId)
       }
     });
   }
