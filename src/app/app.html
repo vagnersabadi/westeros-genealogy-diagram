@@ -1,0 +1,72 @@
+<div class="app-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <span class="dragon-icon">⚔️</span>
+      <h1>Westeros Genealogy</h1>
+    </div>
+    
+    <p class="sidebar__description">
+      An interactive genealogy diagram of the Great Houses of Westeros. Choose a house tab to view its family tree, drag to pan, and scroll to zoom.
+    </p>
+
+    <!-- Relationship Legend -->
+    <div class="legend-section">
+      <h3>Relationship Legend</h3>
+      <div class="legend-list">
+        <div class="legend-item">
+          <span class="legend-line" style="background-color: #4a1212;"></span>
+          <span class="legend-text">Traditional Marriage</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-line" style="background-color: #e63946;"></span>
+          <span class="legend-text">Sibling Marriage</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-line" style="background-color: #f4a261;"></span>
+          <span class="legend-text">Cousin Marriage</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-line" style="background-color: #ffb703;"></span>
+          <span class="legend-text">Uncle / Niece</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-line legend-line--dashed" style="border-color: #e85d04;"></span>
+          <span class="legend-text">Bastard Lineage</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="sidebar__footer">
+      Pure CSS & Angular 22 • ng-diagram
+    </footer>
+  </aside>
+
+  <!-- Diagram Area -->
+  <main class="main-content">
+    <!-- House Tabs -->
+    <nav class="house-tabs">
+      @for (house of houses; track house) {
+        <button 
+          class="tab-btn" 
+          [class.active]="selectedHouseTree() === house"
+          (click)="setFilter(house)"
+        >
+          <span class="house-indicator" [class]="'house-indicator--' + house.toLowerCase()"></span>
+          House {{ house }}
+        </button>
+      }
+    </nav>
+
+    <div class="diagram-container">
+      <ng-diagram 
+        [model]="model()" 
+        [nodeTemplateMap]="nodeTemplateMap"
+        [edgeTemplateMap]="edgeTemplateMap"
+      >
+        <ng-diagram-background />
+        <ng-diagram-minimap />
+      </ng-diagram>
+    </div>
+  </main>
+</div>

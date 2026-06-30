@@ -1,0 +1,237 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: #090505;
+  color: #f1e6d0;
+  overflow: hidden;
+}
+
+.app-layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  flex: 0 0 300px;
+  background: linear-gradient(180deg, #120909 0%, #090505 100%);
+  border-right: 1px solid #2e1414;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 10;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+
+  .dragon-icon {
+    font-size: 24px;
+    filter: drop-shadow(0 0 8px rgba(230, 57, 70, 0.4));
+  }
+
+  h1 {
+    margin: 0;
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #c89b3c;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.sidebar__description {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #8c7a6a;
+  margin: 0 0 28px;
+}
+
+/* Legend Section */
+.legend-section {
+  margin-bottom: auto;
+
+  h3 {
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #c89b3c;
+    margin: 0 0 14px;
+    border-bottom: 1px solid #2e1414;
+    padding-bottom: 6px;
+  }
+}
+
+.legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legend-line {
+  width: 32px;
+  height: 3px;
+  border-radius: 1px;
+  display: block;
+  flex-shrink: 0;
+
+  &--dashed {
+    height: 0;
+    border-top: 2px dashed;
+  }
+}
+
+.legend-text {
+  font-size: 12px;
+  color: #a89482;
+}
+
+.sidebar__footer {
+  font-size: 11px;
+  color: #5c4e4e;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #1a0f0f;
+  padding-top: 14px;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+/* Horizontal Tabs Row */
+.house-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 16px 24px;
+  background: #0f0808;
+  border-bottom: 1px solid #241111;
+  overflow-x: auto;
+  flex-shrink: 0;
+  scrollbar-width: none; /* Hide scrollbars */
+  &::-webkit-scrollbar { display: none; }
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: #8c7a6a;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: #f1e6d0;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #4a1212 0%, #2b0b0b 100%);
+    border-color: #8a1d1d;
+    color: #ffd880;
+    box-shadow: 0 2px 12px rgba(74, 18, 18, 0.3);
+  }
+}
+
+/* Tab indicator dots */
+.house-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #666;
+  flex-shrink: 0;
+
+  &--targaryen { background: #e63946; }
+  &--stark { background: #7b8e9f; }
+  &--lannister { background: #d49e37; }
+  &--baratheon { background: #ffd700; }
+  &--martell { background: #e0721b; }
+  &--greyjoy { background: #1a7b8c; }
+  &--tyrell { background: #3c9c3c; }
+}
+
+/* Diagram Viewport Container */
+.diagram-container {
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 0;
+  background: #090505;
+
+  ::ng-deep {
+    .ng-diagram-background {
+      --background-color: #090505;
+      --pattern-color: #1a0d0d;
+    }
+    .ng-diagram-minimap {
+      background: #120909;
+      border: 1px solid #2e1414;
+      border-radius: 8px;
+    }
+  }
+}
+
+/* Empty State / Coming Soon styling */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40px;
+  text-align: center;
+  box-sizing: border-box;
+
+  .empty-state__icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.65;
+    filter: drop-shadow(0 0 12px rgba(200, 155, 60, 0.2));
+  }
+
+  h2 {
+    font-family: 'Cinzel', 'Georgia', serif;
+    color: #c89b3c;
+    font-size: 20px;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    max-width: 440px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #8c7a6a;
+    margin: 0;
+  }
+}

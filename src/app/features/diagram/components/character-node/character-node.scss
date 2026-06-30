@@ -1,0 +1,121 @@
+:host {
+  display: flex;
+  position: relative;
+}
+
+/* Minimalist Card Design */
+.c-node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 220px;
+  height: 70px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #121214;
+  border: 1px solid #222225;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  cursor: grab;
+  user-select: none;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Hover state */
+  &:hover {
+    border-color: #3b3b4f;
+    background: #18181b;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Left-side thin house accent indicator (Sleek/Minimalist) */
+.c-node::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #333;
+}
+
+.c-node__photo-wrap {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #2a2a2f;
+  background: #1c1c1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-node__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.c-node__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.c-node__name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #f1e6d0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c-node__title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  color: #e63946; /* Small, red font under name */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* Minimalist Royal Indicator (Gold border #d4af37 around avatar & top border) */
+.c-node.is-royal {
+  border-color: rgba(212, 175, 55, 0.25);
+  
+  .c-node__photo-wrap {
+    border-color: #d4af37;
+    box-shadow: 0 0 6px rgba(212, 175, 55, 0.3);
+  }
+
+  .c-node__name {
+    color: #ffd880;
+  }
+}
+
+/* House Accent Colors mapped to the left border strip */
+.house-targaryen::before { background: #e63946; }
+.house-stark::before { background: #7b8e9f; }
+.house-lannister::before { background: #d49e37; }
+.house-baratheon::before { background: #ffd700; }
+.house-martell::before { background: #e0721b; }
+.house-velaryon::before { background: #3ca2c0; }
+.house-arryn::before { background: #4a8bb0; }
+.house-dayne::before { background: #8a7baf; }
+.house-blackwood::before { background: #2f5f2f; }
+
+/* Bastard status modifier - dashed border */
+.c-node.is-bastard {
+  border-style: dashed;
+}
