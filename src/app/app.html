@@ -63,10 +63,27 @@
         [model]="model()" 
         [nodeTemplateMap]="nodeTemplateMap"
         [edgeTemplateMap]="edgeTemplateMap"
+        [config]="diagramConfig"
       >
         <ng-diagram-background />
         <ng-diagram-minimap />
       </ng-diagram>
+
+      <!-- Viewport Controls Toolbar -->
+      <div class="viewport-toolbar">
+        <button class="tool-btn" (click)="zoomIn()" title="Zoom In">
+          <span>➕</span>
+        </button>
+        <button class="tool-btn" (click)="zoomOut()" title="Zoom Out">
+          <span>➖</span>
+        </button>
+        <button class="tool-btn" (click)="zoomToFit()" title="Zoom to Fit">
+          <span>🎯</span>
+        </button>
+        <button class="tool-btn" (click)="resetView()" title="Reset View">
+          <span>🔄</span>
+        </button>
+      </div>
     </div>
   </main>
 </div>

@@ -9,4 +9,5 @@ export interface Character {
   isKingOrQueen: boolean;
   parents: string[]; // IDs of parents
   spouses: string[]; // IDs of spouses
+  isChildlessSpouse?: boolean;
 }

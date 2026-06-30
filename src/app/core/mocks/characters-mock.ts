@@ -41,7 +41,7 @@ export const CHARACTERS_MOCK: Character[] = [
     parents: [],
     spouses: ['aegon-i']
   },
-
+  
   // Generation 2
   {
     id: 'aenys-i',
@@ -52,7 +52,7 @@ export const CHARACTERS_MOCK: Character[] = [
     imageUrl: avatar('Aenys I', '1a0e0e'),
     isBastard: false,
     isKingOrQueen: true,
-    parents: ['aegon-i', 'rhaenys'],
+    parents: ['rhaenys'],
     spouses: ['alyssa-velaryon']
   },
   {
@@ -64,8 +64,68 @@ export const CHARACTERS_MOCK: Character[] = [
     imageUrl: avatar('Maegor I', '1a0e0e'),
     isBastard: false,
     isKingOrQueen: true,
-    parents: ['aegon-i', 'visenya'],
-    spouses: []
+    parents: ['visenya'],
+    spouses: ['ceryse-hightower', 'alys-harroway', 'tyanna-towers', 'elinor-costayne', 'jeyne-westerling']
+  },
+  {
+    id: 'ceryse-hightower',
+    name: 'Ceryse Hightower',
+    title: 'Queen Consort',
+    house: 'Hightower',
+    gender: 'female',
+    imageUrl: avatar('Ceryse H', '143d1f'),
+    isBastard: false,
+    isKingOrQueen: false,
+    parents: [],
+    spouses: ['maegor-i']
+  },
+  {
+    id: 'alys-harroway',
+    name: 'Alys Harroway',
+    title: 'Queen Consort',
+    house: 'Harroway',
+    gender: 'female',
+    imageUrl: avatar('Alys H', '2a2a2a'),
+    isBastard: false,
+    isKingOrQueen: false,
+    parents: [],
+    spouses: ['maegor-i']
+  },
+  {
+    id: 'tyanna-towers',
+    name: 'Tyanna of the Towers',
+    title: 'Queen Consort',
+    house: 'Towers',
+    gender: 'female',
+    imageUrl: avatar('Tyanna T', '321a42'),
+    isBastard: false,
+    isKingOrQueen: false,
+    parents: [],
+    spouses: ['maegor-i']
+  },
+  {
+    id: 'elinor-costayne',
+    name: 'Elinor Costayne',
+    title: 'Queen Consort *',
+    house: 'Costayne',
+    gender: 'female',
+    imageUrl: avatar('Elinor C', '1d2e3d'),
+    isBastard: false,
+    isKingOrQueen: false,
+    parents: [],
+    spouses: ['maegor-i']
+  },
+  {
+    id: 'jeyne-westerling',
+    name: 'Jeyne Westerling',
+    title: 'Queen Consort *',
+    house: 'Westerling',
+    gender: 'female',
+    imageUrl: avatar('Jeyne W', '1d263b'),
+    isBastard: false,
+    isKingOrQueen: false,
+    parents: [],
+    spouses: ['maegor-i']
   },
   {
     id: 'alyssa-velaryon',
@@ -78,9 +138,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: [],
     spouses: ['aenys-i']
-  },
+  }
 
-  // Generation 3 (Simplified link down to modern era)
+  // Generation 3
+  ,
   {
     id: 'jaehaerys-i',
     name: 'Jaehaerys I Targaryen',
@@ -104,9 +165,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: true,
     parents: ['aenys-i', 'alyssa-velaryon'],
     spouses: ['jaehaerys-i']
-  },
+  }
 
   // Generation 4
+  ,
   {
     id: 'baelon',
     name: 'Baelon Targaryen',
@@ -130,9 +192,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: ['jaehaerys-i', 'alysanne'],
     spouses: ['baelon']
-  },
+  }
 
   // Generation 5
+  ,
   {
     id: 'viserys-i',
     name: 'Viserys I Targaryen',
@@ -168,9 +231,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: ['baelon', 'alyssa-t'],
     spouses: ['rhaenyra']
-  },
-
+  }
+/*
   // Generation 6
+  ,
   {
     id: 'rhaenyra',
     name: 'Rhaenyra Targaryen',
@@ -182,9 +246,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: true,
     parents: ['viserys-i', 'aemma-arryn'],
     spouses: ['daemon']
-  },
+  }
 
   // Generation 7
+  ,
   {
     id: 'viserys-ii',
     name: 'Viserys II Targaryen',
@@ -208,9 +273,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: [],
     spouses: ['viserys-ii']
-  },
+  }
 
   // Generation 8
+  ,
   {
     id: 'aegon-iv',
     name: 'Aegon IV Targaryen',
@@ -234,9 +300,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: true,
     parents: ['viserys-ii', 'larra-rogare'],
     spouses: ['aegon-iv']
-  },
+  }
 
   // Generation 9
+  ,
   {
     id: 'daeron-ii',
     name: 'Daeron II Targaryen',
@@ -260,9 +327,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: [],
     spouses: ['daeron-ii']
-  },
+  }
 
   // Generation 10
+  ,
   {
     id: 'maekar-i',
     name: 'Maekar I Targaryen',
@@ -286,9 +354,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: [],
     spouses: ['maekar-i']
-  },
+  }
 
   // Generation 11
+  ,
   {
     id: 'aegon-v',
     name: 'Aegon V Targaryen',
@@ -312,9 +381,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: [],
     spouses: ['aegon-v']
-  },
+  }
 
   // Generation 12
+  ,
   {
     id: 'jaehaerys-ii',
     name: 'Jaehaerys II Targaryen',
@@ -338,9 +408,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: true,
     parents: ['aegon-v', 'betha-blackwood'],
     spouses: ['jaehaerys-ii']
-  },
+  }
 
   // Generation 13
+  ,
   {
     id: 'aerys-ii',
     name: 'Aerys II Targaryen',
@@ -364,9 +435,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: true,
     parents: ['jaehaerys-ii', 'shaera'],
     spouses: ['aerys-ii']
-  },
+  }
 
-  // Generation 14 (Modern Era)
+  // Generation 14
+  ,
   {
     id: 'rhaegar',
     name: 'Rhaegar Targaryen',
@@ -402,9 +474,10 @@ export const CHARACTERS_MOCK: Character[] = [
     isKingOrQueen: false,
     parents: [],
     spouses: ['rhaegar']
-  },
+  }
 
-  // Generation 15 (Bottom/Cross-House Connections)
+  // Generation 15
+  ,
   {
     id: 'jon-snow',
     name: 'Jon Snow',
@@ -417,66 +490,5 @@ export const CHARACTERS_MOCK: Character[] = [
     parents: ['rhaegar', 'lyanna-stark'],
     spouses: []
   },
-
-  // Robert and Cersei lineage to demonstrate cross-house connections
-  {
-    id: 'robert-baratheon',
-    name: 'Robert Baratheon',
-    title: 'King of the Andals',
-    house: 'Baratheon',
-    gender: 'male',
-    imageUrl: avatar('Robert B', '2a240f'),
-    isBastard: false,
-    isKingOrQueen: true,
-    parents: [],
-    spouses: ['cersei-lannister']
-  },
-  {
-    id: 'cersei-lannister',
-    name: 'Cersei Lannister',
-    title: 'Queen Regent',
-    house: 'Lannister',
-    gender: 'female',
-    imageUrl: avatar('Cersei L', '2a1313'),
-    isBastard: false,
-    isKingOrQueen: true,
-    parents: [],
-    spouses: ['robert-baratheon']
-  },
-  {
-    id: 'joffrey-baratheon',
-    name: 'Joffrey Baratheon',
-    title: 'King of the Andals',
-    house: 'Baratheon',
-    gender: 'male',
-    imageUrl: avatar('Joffrey B', '2a240f'),
-    isBastard: false,
-    isKingOrQueen: true,
-    parents: ['robert-baratheon', 'cersei-lannister'],
-    spouses: []
-  },
-  {
-    id: 'myrcella-baratheon',
-    name: 'Myrcella Baratheon',
-    title: 'Princess',
-    house: 'Baratheon',
-    gender: 'female',
-    imageUrl: avatar('Myrcella B', '2a240f'),
-    isBastard: false,
-    isKingOrQueen: false,
-    parents: ['robert-baratheon', 'cersei-lannister'],
-    spouses: []
-  },
-  {
-    id: 'tommen-baratheon',
-    name: 'Tommen Baratheon',
-    title: 'King of the Andals',
-    house: 'Baratheon',
-    gender: 'male',
-    imageUrl: avatar('Tommen B', '2a240f'),
-    isBastard: false,
-    isKingOrQueen: true,
-    parents: ['robert-baratheon', 'cersei-lannister'],
-    spouses: []
-  }
+  */
 ];

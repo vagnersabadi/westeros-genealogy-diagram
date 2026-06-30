@@ -15,7 +15,7 @@
   background: #121214;
   border: 1px solid #222225;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  cursor: grab;
+  cursor: default;
   user-select: none;
   box-sizing: border-box;
   position: relative;
@@ -30,14 +30,14 @@
   }
 }
 
-/* Left-side thin house accent indicator (Sleek/Minimalist) */
+/* Top-side thin house accent indicator (Org Chart Style) */
 .c-node::before {
   content: '';
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
-  bottom: 0;
-  width: 4px;
+  height: 4px;
   background: #333;
 }
 
@@ -104,16 +104,135 @@
   }
 }
 
-/* House Accent Colors mapped to the left border strip */
-.house-targaryen::before { background: #e63946; }
-.house-stark::before { background: #7b8e9f; }
-.house-lannister::before { background: #d49e37; }
-.house-baratheon::before { background: #ffd700; }
-.house-martell::before { background: #e0721b; }
-.house-velaryon::before { background: #3ca2c0; }
-.house-arryn::before { background: #4a8bb0; }
-.house-dayne::before { background: #8a7baf; }
-.house-blackwood::before { background: #2f5f2f; }
+/* Aegon I Distinguished Founder Card */
+.c-node.is-founder {
+  border: 1px solid #ffd700 !important;
+  background: linear-gradient(135deg, #1b0f0f 0%, #120909 100%) !important;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35), inset 0 0 10px rgba(230, 57, 70, 0.15) !important;
+  transform: scale(1.05);
+  
+  &::before {
+    background: linear-gradient(90deg, #ffd700, #e63946, #ffd700) !important;
+    height: 5px !important;
+  }
+
+  .c-node__photo-wrap {
+    border: 2px solid #ffd700 !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5) !important;
+    width: 46px;
+    height: 46px;
+  }
+
+  .c-node__name {
+    color: #ffd700 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px;
+  }
+
+  .c-node__title {
+    color: #e63946 !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+  }
+}
+
+/* Spouses List Container */
+.c-node--spouses-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  
+  .c-node--text-only {
+    align-items: flex-end !important;
+  }
+}
+
+/* Childless Spouses Text-Only Layout */
+.c-node--text-only {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 4px 0 !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  width: 180px !important;
+
+  .c-node__name {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--house-color, #a89482) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-family: 'Cinzel', 'Georgia', serif;
+  }
+
+  &::before {
+    display: none !important;
+  }
+}
+
+/* House Accent Colors mapped to CSS variables for dynamic usage */
+.house-targaryen {
+  --house-color: #e63946;
+  &::before { background: #e63946; }
+}
+.house-stark {
+  --house-color: #7b8e9f;
+  &::before { background: #7b8e9f; }
+}
+.house-lannister {
+  --house-color: #d49e37;
+  &::before { background: #d49e37; }
+}
+.house-baratheon {
+  --house-color: #ffd700;
+  &::before { background: #ffd700; }
+}
+.house-martell {
+  --house-color: #e0721b;
+  &::before { background: #e0721b; }
+}
+.house-velaryon {
+  --house-color: #3ca2c0;
+  &::before { background: #3ca2c0; }
+}
+.house-arryn {
+  --house-color: #4a8bb0;
+  &::before { background: #4a8bb0; }
+}
+.house-dayne {
+  --house-color: #8a7baf;
+  &::before { background: #8a7baf; }
+}
+.house-blackwood {
+  --house-color: #2f5f2f;
+  &::before { background: #2f5f2f; }
+}
+.house-hightower {
+  --house-color: #2f7547;
+}
+.house-harroway {
+  --house-color: #808080;
+}
+.house-towers {
+  --house-color: #8040b0;
+}
+.house-costayne {
+  --house-color: #3b7bb0;
+}
+.house-westerling {
+  --house-color: #4b6bb0;
+}
 
 /* Bastard status modifier - dashed border */
 .c-node.is-bastard {

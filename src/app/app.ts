@@ -7,6 +7,7 @@ import {
   NgDiagramEdgeTemplateMap,
   initializeModel,
   provideNgDiagram,
+  NgDiagramViewportService,
   type Edge,
   type Node,
 } from 'ng-diagram';
@@ -29,10 +30,12 @@ import { calculateLayout } from './core/utils/layout.engine';
 })
 export class App {
   private injector = inject(Injector);
+  private viewportService = inject(NgDiagramViewportService);
 
   // Register node and edge templates
   nodeTemplateMap = new NgDiagramNodeTemplateMap([
     ['targaryen', CharacterNode],
+    ['childless-spouse', CharacterNode],
     ['default', CharacterNode],
     ['selection', CharacterNode],
     ['group', CharacterNode],
@@ -45,6 +48,10 @@ export class App {
     ['default', RelationshipEdge],
     ['', RelationshipEdge]
   ]);
+
+  diagramConfig = {
+    nodeDraggingEnabled: false
+  };
 
   // Selected House Family Tree Tab
   selectedHouseTree = signal<'Targaryen' | 'Stark' | 'Lannister' | 'Baratheon' | 'Greyjoy' | 'Tyrell' | 'Martell'>('Targaryen');
@@ -80,5 +87,21 @@ export class App {
 
   setFilter(house: any) {
     this.selectedHouseTree.set(house);
+  }
+
+  zoomIn() {
+    this.viewportService.zoom(1.2);
+  }
+
+  zoomOut() {
+    this.viewportService.zoom(1 / 1.2);
+  }
+
+  zoomToFit() {
+    this.viewportService.zoomToFit();
+  }
+
+  resetView() {
+    this.viewportService.setViewport(0, 0, 1);
   }
 }
