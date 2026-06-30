@@ -62,12 +62,30 @@ export class App {
   // Layout direction state — default is vertical
   layoutDirection = signal<'horizontal' | 'vertical'>('vertical');
 
+  // Selected relationship details for global popup
+  selectedEdgeId = signal<string | null>(null);
+  selectedRelationship = signal<{ id: string; type: string; names: string; desc: string } | null>(null);
+
   toggleSidebar() {
     this.sidebarOpen.update(v => !v);
   }
 
   toggleLayout() {
     this.layoutDirection.update(d => d === 'vertical' ? 'horizontal' : 'vertical');
+  }
+
+  selectRelationship(rel: { id: string; type: string; names: string; desc: string } | null) {
+    if (!rel || this.selectedEdgeId() === rel.id) {
+      this.clearRelationship();
+    } else {
+      this.selectedEdgeId.set(rel.id);
+      this.selectedRelationship.set(rel);
+    }
+  }
+
+  clearRelationship() {
+    this.selectedEdgeId.set(null);
+    this.selectedRelationship.set(null);
   }
 
   // Available House Trees

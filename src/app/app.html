@@ -103,6 +103,22 @@
           <span>🔄</span>
         </button>
       </div>
+
+      <!-- Relationship Popup -->
+      @if (selectedRelationship(); as rel) {
+        <div class="relationship-popup">
+          <div class="relationship-popup__header">
+            <h4>{{ rel.type }}</h4>
+            <button class="relationship-popup__close" (click)="clearRelationship()" aria-label="Fechar">×</button>
+          </div>
+          <div class="relationship-popup__names">
+            {{ rel.names }}
+          </div>
+          <p class="relationship-popup__desc">
+            {{ rel.desc }}
+          </p>
+        </div>
+      }
     </div>
   </main>
 </div>

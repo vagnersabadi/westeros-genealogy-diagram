@@ -389,3 +389,81 @@
     transform: scale(0.95);
   }
 }
+
+/* Global Relationship Detail Popup */
+.relationship-popup {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 320px;
+  background: rgba(18, 9, 9, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 155, 60, 0.35);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+
+  .relationship-popup__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+
+    h4 {
+      margin: 0;
+      font-family: 'Cinzel', 'Georgia', serif;
+      font-size: 14px;
+      color: #c89b3c;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .relationship-popup__close {
+    background: transparent;
+    border: none;
+    color: #8c7a6a;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #e63946;
+    }
+  }
+
+  .relationship-popup__names {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #ffd880;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+  }
+
+  .relationship-popup__desc {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #c5b5a5;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
