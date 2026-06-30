@@ -15,15 +15,72 @@
 
 /* Sidebar Styling */
 .sidebar {
-  flex: 0 0 300px;
+  position: relative;
+  flex: 0 0 auto;
+  width: 180px;
+  max-width: 180px;
   background: linear-gradient(180deg, #120909 0%, #090505 100%);
   border-right: 1px solid #2e1414;
-  padding: 28px 24px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   z-index: 10;
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.6);
+  transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+
+  &.sidebar--collapsed {
+    width: 0;
+    max-width: 0;
+    border-right: none;
+
+    .sidebar__content {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+}
+
+.sidebar__toggle {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1e0e0e;
+  border: 1px solid #4a1212;
+  color: #c89b3c;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: background 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    background: #2e1414;
+    box-shadow: 0 0 14px rgba(230, 57, 70, 0.3);
+  }
+}
+
+/* Removed sidebar edge toggle — now using header hamburger */
+
+.sidebar__content {
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  overflow: hidden;
 }
 
 .sidebar__brand {
@@ -123,14 +180,63 @@
 /* Horizontal Tabs Row */
 .house-tabs {
   display: flex;
+  align-items: center;
   gap: 8px;
-  padding: 16px 24px;
+  padding: 10px 16px;
   background: #0f0808;
   border-bottom: 1px solid #241111;
   overflow-x: auto;
   flex-shrink: 0;
-  scrollbar-width: none; /* Hide scrollbars */
+  scrollbar-width: none;
   &::-webkit-scrollbar { display: none; }
+}
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid rgba(200, 155, 60, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px;
+  transition: background 0.2s, border-color 0.2s;
+  margin-right: 8px;
+
+  &:hover {
+    background: rgba(200, 155, 60, 0.08);
+    border-color: rgba(200, 155, 60, 0.5);
+  }
+}
+
+.menu-toggle__bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #c89b3c;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease, width 0.2s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.menu-toggle--open {
+  .menu-toggle__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-toggle__bar:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
+  .menu-toggle__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 }
 
 .tab-btn {

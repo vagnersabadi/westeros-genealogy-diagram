@@ -56,6 +56,13 @@ export class App {
   // Selected House Family Tree Tab
   selectedHouseTree = signal<'Targaryen' | 'Stark' | 'Lannister' | 'Baratheon' | 'Greyjoy' | 'Tyrell' | 'Martell'>('Targaryen');
 
+  // Sidebar collapsed state — starts collapsed
+  sidebarOpen = signal(false);
+
+  toggleSidebar() {
+    this.sidebarOpen.update(v => !v);
+  }
+
   // Available House Trees
   houses: Array<'Targaryen' | 'Stark' | 'Lannister' | 'Baratheon' | 'Greyjoy' | 'Tyrell' | 'Martell'> = [
     'Targaryen', 'Stark', 'Lannister', 'Baratheon', 'Greyjoy', 'Tyrell', 'Martell'
