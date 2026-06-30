@@ -5,14 +5,16 @@ export const GEN4: Character[] = [
   {
     id: "baelon",
     name: "Baelon Targaryen",
-    title: "The Spring Prince",
+    title: "The Brave",
     house: "Targaryen",
     gender: "male",
     imageUrl: avatar("Baelon", "1a0e0e"),
     isBastard: false,
     isKingOrQueen: false,
     parents: ["jaehaerys-i", "alysanne"],
-    spouses: [{ id: "alyssa-t", nome: "Alyssa Targaryen", corTexto: "#d4a0a0" }],
+    spouses: [
+      { id: "alyssa-t", nome: "Alyssa Targaryen", corTexto: "#d4a0a0" },
+    ],
   },
   {
     id: "alyssa-t",
@@ -27,7 +29,7 @@ export const GEN4: Character[] = [
     spouses: [{ id: "baelon", nome: "Baelon Targaryen", corTexto: "#c89b3c" }],
   },
   {
-    id: "aegon-iii",
+    id: "aegon-j-a",
     name: "Aegon Targaryen",
     title: "Prince",
     house: "Targaryen",
@@ -60,7 +62,13 @@ export const GEN4: Character[] = [
     isBastard: false,
     isKingOrQueen: false,
     parents: ["jaehaerys-i", "alysanne"],
-    spouses: [],
+    spouses: [
+      {
+        id: "jocelyn",
+        nome: "Jocelyn Baratheon",
+        corTexto: "#c89b3c",
+      },
+    ],
   },
   {
     id: "maegelle",
@@ -169,7 +177,7 @@ export const GEN4: Character[] = [
     imageUrl: avatar("Aerea", "1a0e0e"),
     isBastard: false,
     isKingOrQueen: false,
-    parents: ["rhaena", "aegon-ii"],
+    parents: ["rhaena", "aegon-uncrowned"],
     spouses: [],
   },
   {
@@ -181,7 +189,7 @@ export const GEN4: Character[] = [
     imageUrl: avatar("Rhaella", "1a0e0e"),
     isBastard: false,
     isKingOrQueen: false,
-    parents: ["rhaena", "aegon-ii"],
+    parents: ["rhaena", "aegon-uncrowned"],
     spouses: [],
-  }
+  },
 ];

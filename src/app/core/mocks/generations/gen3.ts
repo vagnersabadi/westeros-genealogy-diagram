@@ -3,9 +3,9 @@ import { avatar } from "./avatar";
 
 export const GEN3: Character[] = [
   {
-    id: "aegon-ii",
+    id: "aegon-uncrowned",
     name: "Aegon Targaryen",
-    title: "Prince",
+    title: "The Uncrowned",
     house: "Targaryen",
     gender: "male",
     imageUrl: avatar("Rhaena I", "1a0e0e"),
@@ -24,7 +24,9 @@ export const GEN3: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ["alyssa-velaryon"],
-    spouses: [{ id: "aegon-ii", nome: "Aegon Targaryen", corTexto: "#c89b3c" }],
+    spouses: [
+      { id: "aegon-uncrowned", nome: "Aegon Targaryen", corTexto: "#c89b3c" },
+    ],
   },
   {
     id: "alysanne",
