@@ -5,6 +5,7 @@ import { GEN3 } from "./generations/gen3";
 import { GEN4 } from "./generations/gen4";
 import { GEN5 } from "./generations/gen5";
 import { GEN6 } from "./generations/gen6";
+import { GEN7 } from "./generations/gen7";
 // import { GEN_OTHER } from "./generations/gen-other"; // Uncomment to enable generations 5 to 15
 
 export const CHARACTERS_MOCK: Character[] = [
@@ -14,5 +15,6 @@ export const CHARACTERS_MOCK: Character[] = [
   ...GEN4,
   ...GEN5,
   ...GEN6,
+  ...GEN7,
   // ...GEN_OTHER
 ];

@@ -2,6 +2,7 @@ import { Character } from "../../models/character.model";
 import { avatar } from "./avatar";
 
 export const GEN6: Character[] = [
+  // Viserys + Aemma
   {
     id: "rhaenyra",
     name: "Rhaenyra Targaryen",
@@ -29,6 +30,7 @@ export const GEN6: Character[] = [
     parents: ["viserys-i", "aemma-arryn"],
     spouses: [],
   },
+  // Viserys + Alicent
   {
     id: "aegon-ii",
     name: "Aegon Targaryen",
