@@ -3,18 +3,6 @@ import { avatar } from "./avatar";
 
 export const GEN3: Character[] = [
   {
-    id: "rhaena",
-    name: "Rhaena Targaryen",
-    title: "Queen",
-    house: "Targaryen",
-    gender: "female",
-    imageUrl: avatar("Rhaena I", "1a0e0e"),
-    isBastard: false,
-    isKingOrQueen: true,
-    parents: ["alyssa-velaryon"],
-    spouses: [{ id: "aegon-ii", nome: "Aegon Targaryen", corTexto: "#c89b3c" }],
-  },
-  {
     id: "aegon-ii",
     name: "Aegon Targaryen",
     title: "Prince",
@@ -27,16 +15,16 @@ export const GEN3: Character[] = [
     spouses: [{ id: "rhaena", nome: "Rhaena Targaryen", corTexto: "#d4a0a0" }],
   },
   {
-    id: "jaehaerys-i",
-    name: "Jaehaerys I Targaryen",
-    title: "The Conciliator",
+    id: "rhaena",
+    name: "Rhaena Targaryen",
+    title: "Queen",
     house: "Targaryen",
-    gender: "male",
-    imageUrl: avatar("Jaehaerys I", "1a0e0e"),
+    gender: "female",
+    imageUrl: avatar("Rhaena I", "1a0e0e"),
     isBastard: false,
     isKingOrQueen: true,
-    parents: ["aenys-i", "alyssa-velaryon"],
-    spouses: [{ id: "alysanne", nome: "Alysanne Targaryen", corTexto: "#d4a0a0" }],
+    parents: ["alyssa-velaryon"],
+    spouses: [{ id: "aegon-ii", nome: "Aegon Targaryen", corTexto: "#c89b3c" }],
   },
   {
     id: "alysanne",
@@ -48,8 +36,25 @@ export const GEN3: Character[] = [
     isBastard: false,
     isKingOrQueen: true,
     parents: ["aenys-i", "alyssa-velaryon"],
-    spouses: [{ id: "jaehaerys-i", nome: "Jaehaerys I Targaryen", corTexto: "#c89b3c" }],
+    spouses: [
+      { id: "jaehaerys-i", nome: "Jaehaerys I Targaryen", corTexto: "#c89b3c" },
+    ],
   },
+  {
+    id: "jaehaerys-i",
+    name: "Jaehaerys I Targaryen",
+    title: "The Conciliator",
+    house: "Targaryen",
+    gender: "male",
+    imageUrl: avatar("Jaehaerys I", "1a0e0e"),
+    isBastard: false,
+    isKingOrQueen: true,
+    parents: ["aenys-i", "alyssa-velaryon"],
+    spouses: [
+      { id: "alysanne", nome: "Alysanne Targaryen", corTexto: "#d4a0a0" },
+    ],
+  },
+
   {
     id: "viserys-i",
     name: "Viserys Targaryen",
@@ -73,5 +78,5 @@ export const GEN3: Character[] = [
     isKingOrQueen: true,
     parents: ["aenys-i", "alyssa-velaryon"],
     spouses: [],
-  }
+  },
 ];

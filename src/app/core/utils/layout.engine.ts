@@ -112,24 +112,25 @@ export function calculateLayout(
 
   const maxDepth = generations.size > 0 ? Math.max(...generations.keys()) : 0;
 
-  // 6. Position nodes generation-by-generation
+  // 6. Position nodes — VERTICAL layout:
+  //    x = generation column (depth * horizontalGap)
+  //    y = position within column (sibling index * verticalGap)
   const positions = new Map<string, { x: number; y: number }>();
 
   for (let g = 0; g <= maxDepth; g++) {
     const idsInGen = generations.get(g) || [];
     if (idsInGen.length === 0) continue;
 
+    // Group into couple/single items (same logic as before)
     const items: Array<{ type: 'single' | 'couple'; ids: string[] }> = [];
     const localVisited = new Set<string>();
 
     for (const id of idsInGen) {
       if (localVisited.has(id)) continue;
       const char = characterMap.get(id)!;
-      // Find an active spouse that is also in this generation and not yet visited
       const activeSpouse = activeSpouseIds(char).find(
         sId => idsInGen.includes(sId) && !localVisited.has(sId)
       );
-
       if (activeSpouse) {
         items.push({ type: 'couple', ids: [id, activeSpouse] });
         localVisited.add(id);
@@ -140,41 +141,44 @@ export function calculateLayout(
       }
     }
 
-    // Sort by average parent X position
+    // Sort items by average parent Y (since we're now vertical)
     items.sort((a, b) => {
-      const getAvgParentX = (ids: string[]) => {
-        let sumX = 0, count = 0;
+      const getAvgParentY = (ids: string[]) => {
+        let sumY = 0, count = 0;
         for (const id of ids) {
           const char = characterMap.get(id)!;
           for (const pId of char.parents) {
             const pPos = positions.get(pId);
-            if (pPos) { sumX += pPos.x; count++; }
+            if (pPos) { sumY += pPos.y; count++; }
           }
         }
-        return count > 0 ? sumX / count : 1000;
+        return count > 0 ? sumY / count : 400; // default to vertical center
       };
-      return getAvgParentX(a.ids) - getAvgParentX(b.ids);
+      return getAvgParentY(a.ids) - getAvgParentY(b.ids);
     });
 
-    // Compute widths and center around x=600
-    const widths = items.map(item =>
-      item.type === 'couple' ? nodeWidth * 2 + spouseGap : nodeWidth
+    // X is fixed for this generation column
+    const x = g * (nodeWidth + horizontalGap);
+
+    // Compute total height and center vertically around y=400
+    const heights = items.map(item =>
+      item.type === 'couple' ? nodeHeight * 2 + spouseGap : nodeHeight
     );
-    const totalWidth = widths.reduce((s, w) => s + w, 0) + (items.length - 1) * horizontalGap;
-    let startX = 600 - totalWidth / 2;
-    const y = g * verticalGap;
+    const totalHeight = heights.reduce((s, h) => s + h, 0) + (items.length - 1) * verticalGap;
+    let startY = 400 - totalHeight / 2;
 
     for (let i = 0; i < items.length; i++) {
       const item = items[i];
       if (item.type === 'couple') {
         const [id1, id2] = item.ids;
-        positions.set(id1, { x: startX, y });
-        positions.set(id2, { x: startX + nodeWidth + spouseGap, y });
-        startX += nodeWidth * 2 + spouseGap + horizontalGap;
+        // Couple: id1 on top, id2 below
+        positions.set(id1, { x, y: startY });
+        positions.set(id2, { x, y: startY + nodeHeight + spouseGap });
+        startY += nodeHeight * 2 + spouseGap + verticalGap;
       } else {
         const [id] = item.ids;
-        positions.set(id, { x: startX, y });
-        startX += nodeWidth + horizontalGap;
+        positions.set(id, { x, y: startY });
+        startY += nodeHeight + verticalGap;
       }
     }
   }
@@ -217,8 +221,9 @@ export function calculateLayout(
           id: `${char.id}-spouses`,
           type: 'childless-spouse',
           position: {
-            x: spousePos.x - 220,
-            y: spousePos.y + (nodeHeight / 2) - (groupHeight / 2)
+            // In vertical layout: spouse labels sit above the character card
+            x: spousePos.x,
+            y: spousePos.y - groupHeight - 12
           },
           size: { width: 180, height: Math.max(groupHeight, 36) },
           autoSize: false,
@@ -270,9 +275,9 @@ export function calculateLayout(
         edges.push({
           id: `spouse-${char.id}-group`,
           source: `${char.id}-spouses`,
-          sourcePort: 'port-right',
+          sourcePort: 'port-bottom', // label group above → connect bottom to card top
           target: char.id,
-          targetPort: 'port-left',
+          targetPort: 'port-top',
           data: {
             isSpouseConnection: true,
             spouse1Id: `${char.id}-spouses`,
@@ -291,13 +296,13 @@ export function calculateLayout(
       if (spousalEdgeIds.has(edgeKey)) continue;
       spousalEdgeIds.add(edgeKey);
 
+      // In vertical layout couples are stacked top/bottom → use port-bottom ↔ port-top
       const depth1 = depthMap.get(char.id) ?? 0;
       const depth2 = depthMap.get(s.id) ?? 0;
-      let sourcePort = 'port-right';
-      let targetPort = 'port-left';
-
-      if (depth1 < depth2) { sourcePort = 'port-bottom'; targetPort = 'port-top'; }
-      else if (depth1 > depth2) { sourcePort = 'port-top'; targetPort = 'port-bottom'; }
+      // Same generation = stacked vertically → bottom/top
+      // Different generation = shouldn't normally happen for spouses, fallback right/left
+      let sourcePort = depth1 === depth2 ? 'port-bottom' : 'port-right';
+      let targetPort = depth1 === depth2 ? 'port-top'   : 'port-left';
 
       edges.push({
         id: `spouse-${char.id}-${s.id}`,
@@ -323,9 +328,9 @@ export function calculateLayout(
     edges.push({
       id: `child-${sourceParentId}-${char.id}`,
       source: sourceParentId,
-      sourcePort: 'port-bottom',
+      sourcePort: 'port-right',  // Vertical layout: parent is to the LEFT → connect right side
       target: char.id,
-      targetPort: 'port-top',
+      targetPort: 'port-left',   // Child is to the RIGHT → connect left side
       data: {
         isChildConnection: true,
         parentId: sourceParentId,
