@@ -1,35 +1,45 @@
-# TargaryenTree
+# Westeros Genealogy Diagram
 
-Árvore genealógica interativa da Casa Targaryen, construída com **Angular 22** e a biblioteca [ngDiagram](https://www.ngdiagram.dev/).
+Árvore genealógica interativa da Casa Targaryen e das Grandes Casas de Westeros, construída com **Angular 22** e a biblioteca [ng-diagram](https://www.npmjs.com/package/ng-diagram).
 
-## Requisitos
+O projeto conta com um layout responsivo medieval/escuro com transições suaves e representações visuais ricas das conexões familiares.
 
-- Node.js `^22.22.3 || ^24.15.0 || >=26.0.0` (exigido pelo Angular CLI 22). Se sua versão de Node for mais antiga (ex.: 22.22.2), atualize antes de rodar `ng serve` / `ng build`.
-- npm 10+
+## 🚀 Requisitos
 
-## Instalação
+- Node.js `^22.23.1` (ou mais recente)
+- npm `10.9.8` (ou mais recente)
+
+## 📦 Instalação
 
 ```bash
 npm install
 ```
 
-## Rodando localmente
+## 💻 Rodando localmente
 
 ```bash
 npm start
 ```
+Acesse `http://localhost:4200` no seu navegador.
 
-Acesse `http://localhost:4200`.
+## 🛠️ Tecnologias e Recursos
 
-## Estrutura
+- **Angular 22** (Standalone Components e Signals)
+- **ng-diagram** para renderização e interatividade de grafos
+- **Layout Vertical Customizado** de fluxo de gerações da esquerda para a direita
+- **Cores Determinísticas por Mãe** para facilitar a leitura visual das linhas de descendência
+- **Suporte a Ghost Spouses**: Cônjuges sem filhos e sem personagens completos cadastrados são agrupados e convertidos em labels simplificados de texto
+- **Sidebar Retrátil**: Painel de informações e legenda ocultado por padrão, com animações elegantes e controle via menu hambúrguer no header
 
-- `src/app/targaryen-data.ts` — dados das personagens (nome, título, foto) e das uniões/relações de parentesco.
-- `src/app/targaryen-node/` — nó customizado do ngDiagram que renderiza foto + nome de cada personagem.
-- `src/app/app.ts` — monta o modelo do diagrama (nós e arestas) a partir dos dados e configura o `provideNgDiagram()`.
+## 📂 Estrutura do Projeto
 
-## O que dá pra fazer no diagrama
+- `src/app/core/mocks/generations/` - Dados dos personagens organizados e separados por geração (Gerações 1 a 7 ativas)
+- `src/app/core/utils/layout.engine.ts` - Mecanismo de cálculo de layout vertical e agrupamento de cônjuges
+- `src/app/features/diagram/components/character-node/` - Nó customizado contendo avatar, título e comportamento especial para Aegon I e cônjuges sem filhos
+- `src/app/features/diagram/components/relationship-edge/` - Arestas coloridas dinamicamente de acordo com o tipo de união (casamento tradicional, entre irmãos, primos, tio/sobrinha ou bastardos)
+- `src/app/app.ts` e `app.html` - Orquestrador principal do diagrama, menu e sidebar
 
-- Arrastar os cards para reorganizar a árvore.
-- Zoom e pan no canvas.
-- Visualizar a posição geral pelo minimapa no canto.
-- Clicar em um nó para selecioná-lo (destaque visual).
+## 🌐 Publicação (GitHub Pages)
+
+O projeto possui uma Action no GitHub que publica automaticamente o build no GitHub Pages em cada commit na branch `main`:
+- [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
