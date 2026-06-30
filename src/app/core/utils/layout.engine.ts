@@ -7,7 +7,8 @@ export function calculateLayout(
   nodeHeight = 80,
   verticalGap = 160,
   horizontalGap = 80,
-  spouseGap = 40
+  spouseGap = 40,
+  layoutDir: 'horizontal' | 'vertical' = 'vertical'
 ): { nodes: Node[]; edges: Edge[] } {
   // 1. Active character sets
   const activeIds = new Set(characters.map(c => c.id));
@@ -141,44 +142,68 @@ export function calculateLayout(
       }
     }
 
-    // Sort items by average parent Y (since we're now vertical)
+    // Sort items by average parent coordinates (Y if vertical, X if horizontal)
     items.sort((a, b) => {
-      const getAvgParentY = (ids: string[]) => {
-        let sumY = 0, count = 0;
+      const getAvgParentCoord = (ids: string[]) => {
+        let sum = 0, count = 0;
         for (const id of ids) {
           const char = characterMap.get(id)!;
           for (const pId of char.parents) {
             const pPos = positions.get(pId);
-            if (pPos) { sumY += pPos.y; count++; }
+            if (pPos) {
+              sum += layoutDir === 'vertical' ? pPos.y : pPos.x;
+              count++;
+            }
           }
         }
-        return count > 0 ? sumY / count : 400; // default to vertical center
+        return count > 0 ? sum / count : (layoutDir === 'vertical' ? 400 : 600);
       };
-      return getAvgParentY(a.ids) - getAvgParentY(b.ids);
+      return getAvgParentCoord(a.ids) - getAvgParentCoord(b.ids);
     });
 
-    // X is fixed for this generation column
-    const x = g * (nodeWidth + horizontalGap);
+    if (layoutDir === 'vertical') {
+      // VERTICAL: x = generation column, y = stack within column
+      const x = g * (nodeWidth + horizontalGap);
+      const heights = items.map(item =>
+        item.type === 'couple' ? nodeHeight * 2 + spouseGap : nodeHeight
+      );
+      const totalHeight = heights.reduce((s, h) => s + h, 0) + (items.length - 1) * verticalGap;
+      let startY = 400 - totalHeight / 2;
 
-    // Compute total height and center vertically around y=400
-    const heights = items.map(item =>
-      item.type === 'couple' ? nodeHeight * 2 + spouseGap : nodeHeight
-    );
-    const totalHeight = heights.reduce((s, h) => s + h, 0) + (items.length - 1) * verticalGap;
-    let startY = 400 - totalHeight / 2;
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.type === 'couple') {
+          const [id1, id2] = item.ids;
+          positions.set(id1, { x, y: startY });
+          positions.set(id2, { x, y: startY + nodeHeight + spouseGap });
+          startY += nodeHeight * 2 + spouseGap + verticalGap;
+        } else {
+          const [id] = item.ids;
+          positions.set(id, { x, y: startY });
+          startY += nodeHeight + verticalGap;
+        }
+      }
+    } else {
+      // HORIZONTAL: y = generation row, x = spread within row
+      const y = g * verticalGap;
+      const widths = items.map(item =>
+        item.type === 'couple' ? nodeWidth * 2 + spouseGap : nodeWidth
+      );
+      const totalWidth = widths.reduce((s, w) => s + w, 0) + (items.length - 1) * horizontalGap;
+      let startX = 600 - totalWidth / 2;
 
-    for (let i = 0; i < items.length; i++) {
-      const item = items[i];
-      if (item.type === 'couple') {
-        const [id1, id2] = item.ids;
-        // Couple: id1 on top, id2 below
-        positions.set(id1, { x, y: startY });
-        positions.set(id2, { x, y: startY + nodeHeight + spouseGap });
-        startY += nodeHeight * 2 + spouseGap + verticalGap;
-      } else {
-        const [id] = item.ids;
-        positions.set(id, { x, y: startY });
-        startY += nodeHeight + verticalGap;
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.type === 'couple') {
+          const [id1, id2] = item.ids;
+          positions.set(id1, { x: startX, y });
+          positions.set(id2, { x: startX + nodeWidth + spouseGap, y });
+          startX += nodeWidth * 2 + spouseGap + horizontalGap;
+        } else {
+          const [id] = item.ids;
+          positions.set(id, { x: startX, y });
+          startX += nodeWidth + horizontalGap;
+        }
       }
     }
   }
@@ -221,11 +246,12 @@ export function calculateLayout(
           id: `${char.id}-spouses`,
           type: 'childless-spouse',
           position: {
-            // In vertical layout: spouse labels sit above the character card
-            x: spousePos.x,
-            y: spousePos.y - groupHeight - 12
+            // Under vertical layout: spouse labels sit above the character card
+            // Under horizontal layout: spouse labels sit on the left of the card
+            x: layoutDir === 'vertical' ? spousePos.x : spousePos.x - 220,
+            y: layoutDir === 'vertical' ? spousePos.y - groupHeight - 12 : spousePos.y + (nodeHeight / 2) - (groupHeight / 2)
           },
-          size: { width: 180, height: Math.max(groupHeight, 36) },
+          size: layoutDir === 'vertical' ? { width: 180, height: Math.max(groupHeight, 36) } : { width: 180, height: groupHeight },
           autoSize: false,
           data: {
             id: `${char.id}-spouses`,
@@ -275,9 +301,9 @@ export function calculateLayout(
         edges.push({
           id: `spouse-${char.id}-group`,
           source: `${char.id}-spouses`,
-          sourcePort: 'port-bottom', // label group above → connect bottom to card top
+          sourcePort: layoutDir === 'vertical' ? 'port-bottom' : 'port-right',
           target: char.id,
-          targetPort: 'port-top',
+          targetPort: layoutDir === 'vertical' ? 'port-top' : 'port-left',
           data: {
             isSpouseConnection: true,
             spouse1Id: `${char.id}-spouses`,
@@ -297,12 +323,19 @@ export function calculateLayout(
       spousalEdgeIds.add(edgeKey);
 
       // In vertical layout couples are stacked top/bottom → use port-bottom ↔ port-top
+      // In horizontal layout couples are side-by-side → use port-right ↔ port-left
       const depth1 = depthMap.get(char.id) ?? 0;
       const depth2 = depthMap.get(s.id) ?? 0;
-      // Same generation = stacked vertically → bottom/top
-      // Different generation = shouldn't normally happen for spouses, fallback right/left
-      let sourcePort = depth1 === depth2 ? 'port-bottom' : 'port-right';
-      let targetPort = depth1 === depth2 ? 'port-top'   : 'port-left';
+      let sourcePort = 'port-right';
+      let targetPort = 'port-left';
+
+      if (layoutDir === 'vertical') {
+        sourcePort = depth1 === depth2 ? 'port-bottom' : 'port-right';
+        targetPort = depth1 === depth2 ? 'port-top'   : 'port-left';
+      } else {
+        if (depth1 < depth2) { sourcePort = 'port-bottom'; targetPort = 'port-top'; }
+        else if (depth1 > depth2) { sourcePort = 'port-top'; targetPort = 'port-bottom'; }
+      }
 
       edges.push({
         id: `spouse-${char.id}-${s.id}`,
@@ -328,9 +361,9 @@ export function calculateLayout(
     edges.push({
       id: `child-${sourceParentId}-${char.id}`,
       source: sourceParentId,
-      sourcePort: 'port-right',  // Vertical layout: parent is to the LEFT → connect right side
+      sourcePort: layoutDir === 'vertical' ? 'port-right' : 'port-bottom',
       target: char.id,
-      targetPort: 'port-left',   // Child is to the RIGHT → connect left side
+      targetPort: layoutDir === 'vertical' ? 'port-left' : 'port-top',
       data: {
         isChildConnection: true,
         parentId: sourceParentId,

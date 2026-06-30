@@ -66,18 +66,6 @@ export const GEN5: Character[] = [
     ],
   },
   {
-    id: "laena-velaryon",
-    name: "Laena Velaryon",
-    title: "Lady of Driftmark",
-    house: "Velaryon",
-    gender: "female",
-    imageUrl: avatar("Laena Velaryon", "1a0e0e"),
-    isBastard: false,
-    isKingOrQueen: false,
-    parents: ["baelon", "alyssa-t"],
-    spouses: [{ id: "daemon", nome: "Daemon Targaryen", corTexto: "#d4a0a0" }],
-  },
-  {
     id: "rhaenys-ii",
     name: "Rhaenys Targaryen",
     title: "The Queen Who Never Was",

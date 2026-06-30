@@ -59,8 +59,15 @@ export class App {
   // Sidebar collapsed state — starts collapsed
   sidebarOpen = signal(false);
 
+  // Layout direction state — default is vertical
+  layoutDirection = signal<'horizontal' | 'vertical'>('vertical');
+
   toggleSidebar() {
     this.sidebarOpen.update(v => !v);
+  }
+
+  toggleLayout() {
+    this.layoutDirection.update(d => d === 'vertical' ? 'horizontal' : 'vertical');
   }
 
   // Available House Trees
@@ -71,11 +78,20 @@ export class App {
   // Dynamically filtered and laid out nodes & edges
   model = computed(() => {
     const activeTree = this.selectedHouseTree();
+    const currentLayout = this.layoutDirection();
     
     // Show full mock data for Targaryen, and empty canvas for other houses to be implemented later
     const characters = activeTree === 'Targaryen' ? CHARACTERS_MOCK : [];
 
-    const { nodes, edges } = calculateLayout(characters);
+    const { nodes, edges } = calculateLayout(
+      characters,
+      220,
+      80,
+      160,
+      80,
+      40,
+      currentLayout
+    );
 
     // Map correct template type to edges based on their relationship type
     const typedEdges = edges.map((e: Edge) => {

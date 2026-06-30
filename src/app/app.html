@@ -87,6 +87,9 @@
 
       <!-- Viewport Controls Toolbar -->
       <div class="viewport-toolbar">
+        <button class="tool-btn" (click)="toggleLayout()" [title]="layoutDirection() === 'vertical' ? 'Switch to Horizontal Layout' : 'Switch to Vertical Layout'">
+          <span>{{ layoutDirection() === 'vertical' ? '↔️' : '↕️' }}</span>
+        </button>
         <button class="tool-btn" (click)="zoomIn()" title="Zoom In">
           <span>➕</span>
         </button>
