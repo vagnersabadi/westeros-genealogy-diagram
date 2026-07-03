@@ -2,18 +2,21 @@
   @if (spousesList().length > 0) {
     <div class="c-node--spouses-list">
       @for (spouse of spousesList(); track spouse.id) {
-        <div class="c-node c-node--text-only">
-          <div class="c-node__name" [style.color]="spouse.corTexto">{{ spouse.nome }}</div>
+        <div class="c-node__name c-node__name--spouse" [style.color]="spouse.corTexto">
+          {{ spouse.nome }}
         </div>
       }
     </div>
   } @else if (character().isChildlessSpouse) {
-    <div class="c-node c-node--text-only" [ngClass]="'house-' + character().house.toLowerCase()">
-      <div class="c-node__name">{{ character().name }}</div>
+    <div class="c-node__name c-node__name--spouse" [ngClass]="'house-' + character().house.toLowerCase()">
+      {{ character().name }}
     </div>
   } @else {
     <div
       class="c-node"
+      (click)="openCharacter()"
+      role="button"
+      tabindex="0"
       [ngClass]="'house-' + character().house.toLowerCase()"
       [class.is-royal]="character().isKingOrQueen"
       [class.is-bastard]="character().isBastard"

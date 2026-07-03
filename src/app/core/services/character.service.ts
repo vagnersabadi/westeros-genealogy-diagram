@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, of } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
@@ -11,6 +11,9 @@ interface CharacterDTO {
   house: string;
   gender: Character['gender'];
   imageUrl: string;
+  imagesList?: string[];
+  wikiUrl?: string;
+  galleryUrls?: string[];
   isBastard: boolean;
   isKingOrQueen: boolean;
   parents: string[];
@@ -27,6 +30,8 @@ interface GenerationsData {
 export class CharacterService {
   private charactersSubject = new BehaviorSubject<Character[]>([]);
   public characters$ = this.charactersSubject.asObservable();
+  public selectedCharacter = signal<Character | null>(null);
+  public selectedImageIndex = signal(0);
 
   private generationsData: GenerationsData | null = null;
 
@@ -76,6 +81,8 @@ export class CharacterService {
     return {
       ...dto,
       imageUrl: this.processImageUrl(dto.imageUrl),
+      imagesList: dto.imagesList?.map((url) => this.processImageUrl(url)),
+      galleryUrls: dto.galleryUrls?.map((url) => this.processImageUrl(url)),
       spouses: dto.spouses || []
     };
   }
@@ -156,6 +163,34 @@ export class CharacterService {
       map((characters) =>
         characters.filter((character) => character.isKingOrQueen)
       )
+    );
+  }
+
+  selectCharacter(character: Character): void {
+    this.selectedCharacter.set(character);
+    this.selectedImageIndex.set(0);
+  }
+
+  clearSelectedCharacter(): void {
+    this.selectedCharacter.set(null);
+    this.selectedImageIndex.set(0);
+  }
+
+  nextGalleryImage(totalImages: number): void {
+    if (totalImages <= 1) {
+      return;
+    }
+
+    this.selectedImageIndex.update((currentIndex) => (currentIndex + 1) % totalImages);
+  }
+
+  previousGalleryImage(totalImages: number): void {
+    if (totalImages <= 1) {
+      return;
+    }
+
+    this.selectedImageIndex.update((currentIndex) =>
+      (currentIndex - 1 + totalImages) % totalImages
     );
   }
 }

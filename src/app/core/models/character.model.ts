@@ -11,6 +11,9 @@ export interface Character {
   house: string;
   gender: 'male' | 'female';
   imageUrl: string;
+  imagesList?: string[];
+  wikiUrl?: string;
+  galleryUrls?: string[];
   isBastard: boolean;
   isKingOrQueen: boolean;
   parents: string[];   // IDs of parent Characters

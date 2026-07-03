@@ -34,10 +34,26 @@ import { calculateLayout } from './core/utils/layout.engine';
 export class App {
   private injector = inject(Injector);
   private viewportService = inject(NgDiagramViewportService);
-  private characterService = inject(CharacterService);
+  readonly characterService = inject(CharacterService);
   
   // Characters loaded from service
   characters = signal<Character[]>([]);
+
+  selectedCharacter = computed(() => this.characterService.selectedCharacter());
+
+  selectedCharacterImages = computed(() => {
+    const character = this.selectedCharacter();
+
+    if (!character) {
+      return [];
+    }
+
+    const extraImages = character.imagesList?.length
+      ? character.imagesList
+      : character.galleryUrls ?? [];
+
+    return [character.imageUrl, ...extraImages].filter(Boolean);
+  });
 
   // Load characters from service on initialization
   constructor() {
@@ -100,6 +116,18 @@ export class App {
   clearRelationship() {
     this.selectedEdgeId.set(null);
     this.selectedRelationship.set(null);
+  }
+
+  closeCharacter() {
+    this.characterService.clearSelectedCharacter();
+  }
+
+  nextCharacterImage() {
+    this.characterService.nextGalleryImage(this.selectedCharacterImages().length);
+  }
+
+  previousCharacterImage() {
+    this.characterService.previousGalleryImage(this.selectedCharacterImages().length);
   }
 
   // Available House Trees

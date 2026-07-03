@@ -6,13 +6,27 @@
       "title": "The Conqueror, The Dragonlord, The Dragon",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegon I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/7/73/AEGON_I.jpg/350px-AEGON_I.jpg",
+      "imagesList": [
+        "https://awoiaf.westeros.org/images/thumb/b/bc/Aegon_the_Conqueror.jpg/350px-Aegon_the_Conqueror.jpg",
+        "https://awoiaf.westeros.org/images/thumb/b/b8/Aegon_and_his_sisters_by_Amok_%28detail%29.jpg/350px-Aegon_and_his_sisters_by_Amok_%28detail%29.jpg",
+        "https://awoiaf.westeros.org/images/thumb/8/80/Aegon%2C_Rhaenys%2C_and_Visenya_by_Lopata_Four.jpg/450px-Aegon%2C_Rhaenys%2C_and_Visenya_by_Lopata_Four.jpg"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_I_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": [],
       "spouses": [
-        { "id": "visenya", "nome": "Visenya Targaryen", "corTexto": "#d4a0a0" },
-        { "id": "rhaenys", "nome": "Rhaenys Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "visenya",
+          "nome": "Visenya Targaryen",
+          "corTexto": "#d4a0a0"
+        },
+        {
+          "id": "rhaenys",
+          "nome": "Rhaenys Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -21,12 +35,17 @@
       "title": "Queen Consort",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Visenya', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/d/de/Visenya.jpg/350px-Visenya.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Visenya_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": [],
       "spouses": [
-        { "id": "aegon-i", "nome": "Aegon I Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "aegon-i",
+          "nome": "Aegon I Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -35,12 +54,17 @@
       "title": "Queen Consort",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaenys', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/82/Rhaenys.jpg/350px-Rhaenys.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaenys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": [],
       "spouses": [
-        { "id": "aegon-i", "nome": "Aegon I Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "aegon-i",
+          "nome": "Aegon I Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     }
   ],
@@ -51,12 +75,19 @@
       "title": "King of the Andals",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aenys I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/d/d3/AENYS_I.jpg/350px-AENYS_I.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aenys_I_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["rhaenys"],
+      "parents": [
+        "rhaenys"
+      ],
       "spouses": [
-        { "id": "alyssa-velaryon", "nome": "Alyssa Velaryon", "corTexto": "#7ecfcf" }
+        {
+          "id": "alyssa-velaryon",
+          "nome": "Alyssa Velaryon",
+          "corTexto": "#7ecfcf"
+        }
       ]
     },
     {
@@ -65,16 +96,42 @@
       "title": "The Cruel",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Maegor I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/e/e3/MAEGOR_I.jpg/350px-MAEGOR_I.jpg",
+      "imagesList": [
+        "https://awoiaf.westeros.org/images/thumb/8/88/Michael_KomarckMaegorIdiesonthethrone.png/350px-Michael_KomarckMaegorIdiesonthethrone.png"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Maegor_I_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["visenya"],
+      "parents": [
+        "visenya"
+      ],
       "spouses": [
-        { "id": "ceryse-hightower", "nome": "Ceryse Hightower", "corTexto": "#a8d5a2" },
-        { "id": "alys-harroway", "nome": "Alys Harroway", "corTexto": "#b0b0b0" },
-        { "id": "tyanna-towers", "nome": "Tyanna of the Towers", "corTexto": "#c09fd8" },
-        { "id": "elinor-costayne", "nome": "Elinor Costayne", "corTexto": "#90bcd4" },
-        { "id": "jeyne-westerling", "nome": "Jeyne Westerling", "corTexto": "#90bcd4" }
+        {
+          "id": "ceryse-hightower",
+          "nome": "Ceryse Hightower",
+          "corTexto": "#a8d5a2"
+        },
+        {
+          "id": "alys-harroway",
+          "nome": "Alys Harroway",
+          "corTexto": "#b0b0b0"
+        },
+        {
+          "id": "tyanna-towers",
+          "nome": "Tyanna of the Towers",
+          "corTexto": "#c09fd8"
+        },
+        {
+          "id": "elinor-costayne",
+          "nome": "Elinor Costayne",
+          "corTexto": "#90bcd4"
+        },
+        {
+          "id": "jeyne-westerling",
+          "nome": "Jeyne Westerling",
+          "corTexto": "#90bcd4"
+        }
       ]
     },
     {
@@ -83,12 +140,17 @@
       "title": "Queen Consort",
       "house": "Velaryon",
       "gender": "female",
-      "imageUrl": "avatar('Alyssa V', '0f2027')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/a/a5/Alyssa_Velaryon_by_Hylora.png/350px-Alyssa_Velaryon_by_Hylora.png",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Alyssa_Velaryon",
       "isBastard": false,
       "isKingOrQueen": false,
       "parents": [],
       "spouses": [
-        { "id": "aenys-i", "nome": "Aenys I Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "aenys-i",
+          "nome": "Aenys I Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     }
   ],
@@ -99,12 +161,20 @@
       "title": "The Uncrowned",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Rhaena I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/9/90/Aegon_the_Uncrowned_and_Rhaena_by_Lopata_Four.jpg/350px-Aegon_the_Uncrowned_and_Rhaena_by_Lopata_Four.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen_(son_of_Aenys_I)",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aenys-i", "alyssa-velaryon"],
+      "parents": [
+        "aenys-i",
+        "alyssa-velaryon"
+      ],
       "spouses": [
-        { "id": "rhaena", "nome": "Rhaena Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "rhaena",
+          "nome": "Rhaena Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -113,12 +183,22 @@
       "title": "Queen",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaena I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/f/fe/Rhaena_by_Hylora.jpg/350px-Rhaena_by_Hylora.jpg",
+      "imagesList": [
+        "https://awoiaf.westeros.org/images/thumb/1/19/Androw_confronts_Rhaena_by_Douglas_Wheatley.png/350px-Androw_confronts_Rhaena_by_Douglas_Wheatley.png"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaena_Targaryen_(daughter_of_Aenys_I)",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["alyssa-velaryon"],
+      "parents": [
+        "alyssa-velaryon"
+      ],
       "spouses": [
-        { "id": "aegon-uncrowned", "nome": "Aegon Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "aegon-uncrowned",
+          "nome": "Aegon Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -127,12 +207,23 @@
       "title": "Good Queen Alysanne",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Alysanne', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/5/55/Alysanne.jpg/350px-Alysanne.jpg",
+      "imagesList": [
+        "https://awoiaf.westeros.org/images/thumb/7/75/Alysanne_100AC.jpeg/350px-Alysanne_100AC.jpeg"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Alysanne_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aenys-i", "alyssa-velaryon"],
+      "parents": [
+        "aenys-i",
+        "alyssa-velaryon"
+      ],
       "spouses": [
-        { "id": "jaehaerys-i", "nome": "Jaehaerys I Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "jaehaerys-i",
+          "nome": "Jaehaerys I Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -141,24 +232,42 @@
       "title": "The Conciliator",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Jaehaerys I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/0/0a/JAEHAERYS_I.jpg/350px-JAEHAERYS_I.jpg",
+      "imagesList": [
+     "https://awoiaf.westeros.org/images/thumb/7/70/Jaehaerys_bedridden.png/350px-Jaehaerys_bedridden.png"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Jaehaerys_I_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aenys-i", "alyssa-velaryon"],
+      "parents": [
+        "aenys-i",
+        "alyssa-velaryon"
+      ],
       "spouses": [
-        { "id": "alysanne", "nome": "Alysanne Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "alysanne",
+          "nome": "Alysanne Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
-      "id": "viserys-i",
+      "id": "viserys-g3",
       "name": "Viserys Targaryen",
       "title": "Prince",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Viserys I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/9/93/Viserys_Targaryen_by_Laura_Avellino.jpg/350px-Viserys_Targaryen_by_Laura_Avellino.jpg",
+      "imagesList": [
+        ""
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Viserys_I_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
-      "parents": ["aenys-i", "alyssa-velaryon"],
+      "isKingOrQueen": false,
+      "parents": [
+        "aenys-i",
+        "alyssa-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -167,10 +276,14 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Vaella', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/4/41/Vaella_Targaryen_by_RLandH.jpg/300px-Vaella_Targaryen_by_RLandH.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Vaella_Targaryen_(daughter_of_Aenys_I)",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aenys-i", "alyssa-velaryon"],
+      "parents": [
+        "aenys-i",
+        "alyssa-velaryon"
+      ],
       "spouses": []
     }
   ],
@@ -181,12 +294,20 @@
       "title": "The Brave",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Baelon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/b/b4/Baelon_Targaryen_by_Riotarttherite.png/350px-Baelon_Targaryen_by_Riotarttherite.png",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelon_Targaryen_(son_of_Jaehaerys_I)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": [
-        { "id": "alyssa-t", "nome": "Alyssa Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "alyssa-t",
+          "nome": "Alyssa Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -195,12 +316,20 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Alyssa T', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/4/46/Alyssa_Targaryen_by_Paparinka_Art.jpg/350px-Alyssa_Targaryen_by_Paparinka_Art.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Alyssa_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": [
-        { "id": "baelon", "nome": "Baelon Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "baelon",
+          "nome": "Baelon Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -209,10 +338,14 @@
       "title": "Prince",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/1/13/Aegon_Targaryen_%28son_of_Jaehaerys_I%29_by_merymeou.jpg/300px-Aegon_Targaryen_%28son_of_Jaehaerys_I%29_by_merymeou.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen_(son_of_Jaehaerys_I)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -221,10 +354,14 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/d/d6/Daenerys_daughter_of_Jaehaerys_by_ildraws.jpg/350px-Daenerys_daughter_of_Jaehaerys_by_ildraws.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daenerys_Targaryen_(daughter_of_Jaehaerys_I)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -233,36 +370,52 @@
       "title": "Prince",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aemon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/2/21/Aemon_by_Udel_Art.jpg/350px-Aemon_by_Udel_Art.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemon_Targaryen_(son_of_Jaehaerys_I)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": [
-        { "id": "jocelyn", "nome": "Jocelyn Baratheon", "corTexto": "#c89b3c" }
+        {
+          "id": "jocelyn",
+          "nome": "Jocelyn Baratheon",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
       "id": "maegelle",
-      "name": "Maegelle Targaryen",
-      "title": "Princess",
+      "name": "Maegelle",
+      "title": "Septa",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Maegelle', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/7/78/Maegelle_Targaryen_by_ildraws.jpg/350px-Maegelle_Targaryen_by_ildraws.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Maegelle_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
       "id": "vaegon",
-      "name": "Vaegon Targaryen",
-      "title": "Prince",
+      "name": "Vaegon",
+      "title": "Archmaester",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Vaegon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/3/34/Vaegon_Targaryen_by_Lopata_4.jpg/350px-Vaegon_Targaryen_by_Lopata_4.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Vaegon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -271,12 +424,20 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Daella', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/3/3b/Daella_Targaryen_%282%29_by_Riotarttherite.png/350px-Daella_Targaryen_%282%29_by_Riotarttherite.png",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daella_Targaryen_(daughter_of_Jaehaerys_I)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": [
-        { "id": "rodrik-arryn", "nome": "Rodrik Arryn", "corTexto": "#90bcd4" }
+        {
+          "id": "rodrik-arryn",
+          "nome": "Rodrik Arryn",
+          "corTexto": "#90bcd4"
+        }
       ]
     },
     {
@@ -285,10 +446,14 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Saera', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/1/18/Saera_Targaryen_by_ildraws.jpg/350px-Saera_Targaryen_by_ildraws.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Saera_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -297,10 +462,14 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Viserra', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/82/Viserra_Targaryen_by_ildraws.jpg/350px-Viserra_Targaryen_by_ildraws.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Viserra_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -309,10 +478,14 @@
       "title": "Prince",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Gaemon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/f/fc/Gaemon_and_Valerion_Targaryen_by_merymeou.jpg/300px-Gaemon_and_Valerion_Targaryen_by_merymeou.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Gaemon_Targaryen_(son_of_Jaehaerys_I)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -321,10 +494,14 @@
       "title": "Prince",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Valerion', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/f/fc/Gaemon_and_Valerion_Targaryen_by_merymeou.jpg/300px-Gaemon_and_Valerion_Targaryen_by_merymeou.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Valerion_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -333,10 +510,14 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Gael', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/89/Gael_Targaryen_by_ildraws.jpg/350px-Gael_Targaryen_by_ildraws.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Gael_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["jaehaerys-i", "alysanne"],
+      "parents": [
+        "jaehaerys-i",
+        "alysanne"
+      ],
       "spouses": []
     },
     {
@@ -345,10 +526,17 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Aerea', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/5/58/Aerea_Targaryen_by_ildraws.jpg/350px-Aerea_Targaryen_by_ildraws.jpg",
+      "imagesList": [
+      "https://awoiaf.westeros.org/images/thumb/5/56/Aerea_death.jpg/350px-Aerea_death.jpg" 
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aerea_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaena", "aegon-uncrowned"],
+      "parents": [
+        "rhaena",
+        "aegon-uncrowned"
+      ],
       "spouses": []
     },
     {
@@ -357,10 +545,14 @@
       "title": "Princess",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaella', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/a/a8/Rhaella_Targaryen_%28daughter_of_Aegon%29_by_ildraws.jpg/350px-Rhaella_Targaryen_%28daughter_of_Aegon%29_by_ildraws.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaella_Targaryen_(daughter_of_Aegon)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaena", "aegon-uncrowned"],
+      "parents": [
+        "rhaena",
+        "aegon-uncrowned"
+      ],
       "spouses": []
     }
   ],
@@ -371,13 +563,28 @@
       "title": "King of the Andals",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Viserys I', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/7/7c/VISERYS_I.jpg/350px-VISERYS_I.jpg",
+      "imagesList": [
+      "https://static.wikia.nocookie.net/gameofthrones/images/9/97/Viserys_I_infobox.png/revision/latest?cb=20220330160517&path-prefix=pt-br"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Viserys_I_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["baelon", "alyssa-t"],
+      "parents": [
+        "baelon",
+        "alyssa-t"
+      ],
       "spouses": [
-        { "id": "aemma-arryn", "nome": "Aemma Arryn", "corTexto": "#90bcd4" },
-        { "id": "alicent-hightower", "nome": "Alicent Hightower", "corTexto": "#90bcd4" }
+        {
+          "id": "aemma-arryn",
+          "nome": "Aemma Arryn",
+          "corTexto": "#90bcd4"
+        },
+        {
+          "id": "alicent-hightower",
+          "nome": "Alicent Hightower",
+          "corTexto": "#90bcd4"
+        }
       ]
     },
     {
@@ -386,12 +593,17 @@
       "title": "Queen of the Andals",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Aemma Arryn', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/e/e7/Aemma_Arryn_by_ildraws.jpg/350px-Aemma_Arryn_by_ildraws.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemma_Arryn",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": [],
       "spouses": [
-        { "id": "viserys-i-king", "nome": "Viserys I Targaryen", "corTexto": "#90bcd4" }
+        {
+          "id": "viserys-i-king",
+          "nome": "Viserys I Targaryen",
+          "corTexto": "#90bcd4"
+        }
       ]
     },
     {
@@ -400,12 +612,22 @@
       "title": "Queen of the Andals",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Alicent Hightower', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/83/Queen_Alicent.jpg/350px-Queen_Alicent.jpg",
+      "imagesList": [
+        "https://awoiaf.westeros.org/images/thumb/3/37/Alicent_Olivia_Cooke2.jpg/350px-Alicent_Olivia_Cooke2.jpg"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Alicent_Hightower",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["otto-hightower"],
+      "parents": [
+        "otto-hightower"
+      ],
       "spouses": [
-        { "id": "viserys-i-king", "nome": "Viserys I Targaryen", "corTexto": "#90bcd4" }
+        {
+          "id": "viserys-i-king",
+          "nome": "Viserys I Targaryen",
+          "corTexto": "#90bcd4"
+        }
       ]
     },
     {
@@ -414,14 +636,34 @@
       "title": "The Rogue Prince",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Daemon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/2/23/Marc_Simonetti_Damon_Prince-VillainII.jpg/300px-Marc_Simonetti_Damon_Prince-VillainII.jpg",
+      "imagesList": [
+        "https://awoiaf.westeros.org/images/thumb/5/56/Daemon_vs_Aemond.jpg/300px-Daemon_vs_Aemond.jpg",
+        "https://static.wikia.nocookie.net/gameofthrones/images/5/5a/DaemonT.png/revision/latest?cb=20220404194010&path-prefix=pt-br"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daemon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["baelon", "alyssa-t"],
+      "parents": [
+        "baelon",
+        "alyssa-t"
+      ],
       "spouses": [
-        { "id": "rhaenyra", "nome": "Rhaenyra Targaryen", "corTexto": "#d4a0a0" },
-        { "id": "laena-velaryon", "nome": "Laena Velaryon", "corTexto": "#d4a0a0" },
-        { "id": "rhea-royce", "nome": "Rhea Royce", "corTexto": "#d4a0a0" }
+        {
+          "id": "rhaenyra",
+          "nome": "Rhaenyra Targaryen",
+          "corTexto": "#d4a0a0"
+        },
+        {
+          "id": "laena-velaryon",
+          "nome": "Laena Velaryon",
+          "corTexto": "#d4a0a0"
+        },
+        {
+          "id": "rhea-royce",
+          "nome": "Rhea Royce",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -430,12 +672,24 @@
       "title": "The Queen Who Never Was",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaenys', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/9/96/Bella_Bergolts_The_Queen_Who_Never_Was.jpg/350px-Bella_Bergolts_The_Queen_Who_Never_Was.jpg",
+      "imagesList": [
+        "https://static.wikia.nocookie.net/gameofthrones/images/9/9a/RhaenysVelaryonTrailer2.PNG/revision/latest?cb=20220721080347",
+        "https://awoiaf.westeros.org/images/thumb/9/97/Death_of_Rhaenys.png/350px-Death_of_Rhaenys.png"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaenys_Targaryen_(daughter_of_Aemon)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aemon", "jocelyn"],
+      "parents": [
+        "aemon",
+        "jocelyn"
+      ],
       "spouses": [
-        { "id": "corlys-velaryon", "nome": "Corlys Velaryon", "corTexto": "#d4a0a0" }
+        {
+          "id": "corlys-velaryon",
+          "nome": "Corlys Velaryon",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -444,10 +698,14 @@
       "title": "Prince",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/images/f/f3/Aegon_Targaryen_%28son_of_Baelon%29_by_merymeou.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen_(son_of_Baelon)",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["baelon", "alyssa-t"],
+      "parents": [
+        "baelon",
+        "alyssa-t"
+      ],
       "spouses": []
     }
   ],
@@ -458,10 +716,14 @@
       "title": "The Realm's Delight",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Baelon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Baelon_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-i-king", "aemma-arryn"],
+      "parents": [
+        "viserys-i-king",
+        "aemma-arryn"
+      ],
       "spouses": []
     },
     {
@@ -470,12 +732,20 @@
       "title": "The Realm's Delight",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aegon_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-i-king", "alicent-hightower"],
+      "parents": [
+        "viserys-i-king",
+        "alicent-hightower"
+      ],
       "spouses": [
-        { "id": "helaena", "nome": "Helaena Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "helaena",
+          "nome": "Helaena Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -484,12 +754,20 @@
       "title": "The Realm's Delight",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Helaena', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Helaena_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Helaena_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-i-king", "alicent-hightower"],
+      "parents": [
+        "viserys-i-king",
+        "alicent-hightower"
+      ],
       "spouses": [
-        { "id": "aegon-ii", "nome": "Aegon Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "aegon-ii",
+          "nome": "Aegon Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -498,10 +776,14 @@
       "title": "The Daring",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Daeron', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daeron_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daeron_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-i-king", "alicent-hightower"],
+      "parents": [
+        "viserys-i-king",
+        "alicent-hightower"
+      ],
       "spouses": []
     },
     {
@@ -510,10 +792,14 @@
       "title": "One-Eye",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aemond', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aemond_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemond_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-i-king", "alicent-hightower"],
+      "parents": [
+        "viserys-i-king",
+        "alicent-hightower"
+      ],
       "spouses": []
     },
     {
@@ -522,12 +808,20 @@
       "title": "Lady of Driftmark",
       "house": "Velaryon",
       "gender": "female",
-      "imageUrl": "avatar('Laena Velaryon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Laena_Velaryon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Laena_Velaryon",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaenys-ii", "corlys-velaryon"],
+      "parents": [
+        "rhaenys-ii",
+        "corlys-velaryon"
+      ],
       "spouses": [
-        { "id": "daemon", "nome": "Daemon Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "daemon",
+          "nome": "Daemon Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -536,13 +830,25 @@
       "title": "The Realm's Delight",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaenyra', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaenyra_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaenyra_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-i-king", "aemma-arryn"],
+      "parents": [
+        "viserys-i-king",
+        "aemma-arryn"
+      ],
       "spouses": [
-        { "id": "daemon", "nome": "Daemon Targaryen", "corTexto": "#c89b3c" },
-        { "id": "laenor-velaryon", "nome": "Laenor Velaryon", "corTexto": "#c89b3c" }
+        {
+          "id": "daemon",
+          "nome": "Daemon Targaryen",
+          "corTexto": "#c89b3c"
+        },
+        {
+          "id": "laenor-velaryon",
+          "nome": "Laenor Velaryon",
+          "corTexto": "#c89b3c"
+        }
       ]
     }
   ],
@@ -553,10 +859,14 @@
       "title": "Prince of Dragonstone",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Jacaerys Velaryon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Jacaerys_Velaryon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Jacaerys_Velaryon",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaenyra", "laenor-velaryon"],
+      "parents": [
+        "rhaenyra",
+        "laenor-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -565,10 +875,14 @@
       "title": "Prince of Dragonstone",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Lucerys Velaryon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Lucerys_Velaryon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Lucerys_Velaryon",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaenyra", "laenor-velaryon"],
+      "parents": [
+        "rhaenyra",
+        "laenor-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -577,10 +891,14 @@
       "title": "Prince of Dragonstone",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Joffrey Velaryon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Joffrey_Velaryon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Joffrey_Velaryon",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaenyra", "laenor-velaryon"],
+      "parents": [
+        "rhaenyra",
+        "laenor-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -589,12 +907,20 @@
       "title": "Aegon III, The Dragonbane",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegon Targaryen III', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aegon_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["rhaenyra", "laenor-velaryon"],
+      "parents": [
+        "rhaenyra",
+        "laenor-velaryon"
+      ],
       "spouses": [
-        { "id": "daena-velaryon", "nome": "Daena Velaryon", "corTexto": "#d4a0a0" }
+        {
+          "id": "daena-velaryon",
+          "nome": "Daena Velaryon",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -603,12 +929,20 @@
       "title": "Viserys II Targaryen",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Viserys_Targaryen_II.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Viserys_Targaryen_II",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["rhaenyra", "laenor-velaryon"],
+      "parents": [
+        "rhaenyra",
+        "laenor-velaryon"
+      ],
       "spouses": [
-        { "id": "larra-rogare", "nome": "Larra Rogare", "corTexto": "#d4a0a0" }
+        {
+          "id": "larra-rogare",
+          "nome": "Larra Rogare",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -617,10 +951,14 @@
       "title": "Visenya Targaryen",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Visenya_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Visenya_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaenyra", "laenor-velaryon"],
+      "parents": [
+        "rhaenyra",
+        "laenor-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -629,10 +967,14 @@
       "title": "Baela of Hull",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Baela Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Baela_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baela_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["daemon", "laena-velaryon"],
+      "parents": [
+        "daemon",
+        "laena-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -641,10 +983,14 @@
       "title": "Rhaena of Hull",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaena Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaena_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaena_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["daemon", "laena-velaryon"],
+      "parents": [
+        "daemon",
+        "laena-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -653,10 +999,14 @@
       "title": "Visenya Targaryen",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Jaehaerys_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Jaehaerys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aegon-ii", "helaena"],
+      "parents": [
+        "aegon-ii",
+        "helaena"
+      ],
       "spouses": []
     },
     {
@@ -665,10 +1015,14 @@
       "title": "Visenya Targaryen",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Jaehaera_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Jaehaera_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aegon-ii", "helaena"],
+      "parents": [
+        "aegon-ii",
+        "helaena"
+      ],
       "spouses": []
     },
     {
@@ -677,10 +1031,14 @@
       "title": "Maelor Targaryen",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Maelor Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Maelor_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Maelor_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aegon-ii", "helaena"],
+      "parents": [
+        "aegon-ii",
+        "helaena"
+      ],
       "spouses": []
     }
   ],
@@ -691,10 +1049,14 @@
       "title": "King Daeron I (The Young Dragon)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Daeron Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daeron_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daeron_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aegon-targaryen-iii", "daenaera-velaryon"],
+      "parents": [
+        "aegon-targaryen-iii",
+        "daenaera-velaryon"
+      ],
       "spouses": []
     },
     {
@@ -703,12 +1065,20 @@
       "title": "King Baelor I (The Blessed)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Baelor Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Baelor_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelor_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aegon-targaryen-iii", "daenaera-velaryon"],
+      "parents": [
+        "aegon-targaryen-iii",
+        "daenaera-velaryon"
+      ],
       "spouses": [
-        { "id": "daena-targaryen", "nome": "Daena Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "daena-targaryen",
+          "nome": "Daena Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -717,13 +1087,25 @@
       "title": "Queen Daena (The Defiant)",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Daena Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daena_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daena_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aegon-targaryen-iii", "daenaera-velaryon"],
+      "parents": [
+        "aegon-targaryen-iii",
+        "daenaera-velaryon"
+      ],
       "spouses": [
-        { "id": "baelor-i-targaryen", "nome": "Baelor I Targaryen", "corTexto": "#c89b3c" },
-        { "id": "aegon-iv-targaryen", "nome": "Aegon IV Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "baelor-i-targaryen",
+          "nome": "Baelor I Targaryen",
+          "corTexto": "#c89b3c"
+        },
+        {
+          "id": "aegon-iv-targaryen",
+          "nome": "Aegon IV Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -732,13 +1114,25 @@
       "title": "King Aegon IV (The Unworthy)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegon Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aegon_IV_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_IV_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-ii-targaryen", "larra-rogare"],
+      "parents": [
+        "viserys-ii-targaryen",
+        "larra-rogare"
+      ],
       "spouses": [
-        { "id": "naerys-targaryen", "nome": "Naerys Targaryen", "corTexto": "#d4a0a0" },
-        { "id": "daena-targaryen", "nome": "Daena Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "naerys-targaryen",
+          "nome": "Naerys Targaryen",
+          "corTexto": "#d4a0a0"
+        },
+        {
+          "id": "daena-targaryen",
+          "nome": "Daena Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -747,10 +1141,14 @@
       "title": "Ser Aemon (The Dragonknight)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aemon Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aemon_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["viserys-ii-targaryen", "larra-rogare"],
+      "parents": [
+        "viserys-ii-targaryen",
+        "larra-rogare"
+      ],
       "spouses": []
     },
     {
@@ -759,12 +1157,20 @@
       "title": "Queen Naerys",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Naerys Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Naerys_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Naerys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["viserys-ii-targaryen", "larra-rogare"],
+      "parents": [
+        "viserys-ii-targaryen",
+        "larra-rogare"
+      ],
       "spouses": [
-        { "id": "aegon-iv-targaryen", "nome": "Aegon IV Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "aegon-iv-targaryen",
+          "nome": "Aegon IV Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     }
   ],
@@ -775,12 +1181,20 @@
       "title": "Daemon Blackfyre (The King Who Bore the Sword)",
       "house": "Blackfyre",
       "gender": "male",
-      "imageUrl": "avatar('Daemon Blackfyre', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daemon_Blackfyre.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daemon_Blackfyre",
       "isBastard": true,
       "isKingOrQueen": false,
-      "parents": ["aegon-iv-targaryen", "daena-targaryen"],
+      "parents": [
+        "aegon-iv-targaryen",
+        "daena-targaryen"
+      ],
       "spouses": [
-        { "id": "rohanne-of-tyrosh", "nome": "Rohanne of Tyrosh", "corTexto": "#d4a0a0" }
+        {
+          "id": "rohanne-of-tyrosh",
+          "nome": "Rohanne of Tyrosh",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -789,10 +1203,13 @@
       "title": "Bittersteel",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegor Rivers', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aegor_Rivers.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegor_Rivers",
       "isBastard": true,
       "isKingOrQueen": false,
-      "parents": ["aegon-iv-targaryen"],
+      "parents": [
+        "aegon-iv-targaryen"
+      ],
       "spouses": []
     },
     {
@@ -801,10 +1218,13 @@
       "title": "Bloodraven (The Three-Eyed Crow)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Brynden Rivers', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Brynden_Rivers.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Brynden_Rivers",
       "isBastard": true,
       "isKingOrQueen": false,
-      "parents": ["aegon-iv-targaryen"],
+      "parents": [
+        "aegon-iv-targaryen"
+      ],
       "spouses": []
     },
     {
@@ -813,12 +1233,20 @@
       "title": "King Daeron II (The Good)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Daeron Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daeron_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daeron_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aegon-iv-targaryen", "naerys-targaryen"],
+      "parents": [
+        "aegon-iv-targaryen",
+        "naerys-targaryen"
+      ],
       "spouses": [
-        { "id": "myriah-martell", "nome": "Myriah Martell", "corTexto": "#d4a0a0" }
+        {
+          "id": "myriah-martell",
+          "nome": "Myriah Martell",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -827,12 +1255,20 @@
       "title": "Princess Daenerys",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Daenerys Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daenerys_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daenerys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aegon-iv-targaryen", "naerys-targaryen"],
+      "parents": [
+        "aegon-iv-targaryen",
+        "naerys-targaryen"
+      ],
       "spouses": [
-        { "id": "maron-martell", "nome": "Maron Martell", "corTexto": "#d4a0a0" }
+        {
+          "id": "maron-martell",
+          "nome": "Maron Martell",
+          "corTexto": "#d4a0a0"
+        }
       ]
     }
   ],
@@ -843,10 +1279,14 @@
       "title": "Haegon Blackfyre",
       "house": "Blackfyre",
       "gender": "male",
-      "imageUrl": "avatar('Haegon Blackfyre', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Haegon_Blackfyre.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Haegon_Blackfyre",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
+      "parents": [
+        "daemon-blackfyre",
+        "rohanne-of-tyrosh"
+      ],
       "spouses": []
     },
     {
@@ -855,12 +1295,20 @@
       "title": "Prince Baelor (Breakspear)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Baelor Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Baelor_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelor_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["daeron-ii-targaryen", "myriah-martell"],
+      "parents": [
+        "daeron-ii-targaryen",
+        "myriah-martell"
+      ],
       "spouses": [
-        { "id": "jena-dondarrion", "nome": "Jena Dondarrion", "corTexto": "#d4a0a0" }
+        {
+          "id": "jena-dondarrion",
+          "nome": "Jena Dondarrion",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -869,12 +1317,20 @@
       "title": "King Aerys I (The Bookish)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aerys Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aerys_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aerys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["daeron-ii-targaryen", "myriah-martell"],
+      "parents": [
+        "daeron-ii-targaryen",
+        "myriah-martell"
+      ],
       "spouses": [
-        { "id": "aelinor-penrose", "nome": "Aelinor Penrose", "corTexto": "#d4a0a0" }
+        {
+          "id": "aelinor-penrose",
+          "nome": "Aelinor Penrose",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -883,12 +1339,20 @@
       "title": "King Maekar I (The Anvil)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Maekar Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Maekar_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Maekar_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["daeron-ii-targaryen", "myriah-martell"],
+      "parents": [
+        "daeron-ii-targaryen",
+        "myriah-martell"
+      ],
       "spouses": [
-        { "id": "dyanna-dayne", "nome": "Dyanna Dayne", "corTexto": "#d4a0a0" }
+        {
+          "id": "dyanna-dayne",
+          "nome": "Dyanna Dayne",
+          "corTexto": "#d4a0a0"
+        }
       ]
     }
   ],
@@ -899,10 +1363,13 @@
       "title": "Daemon III Blackfyre",
       "house": "Blackfyre",
       "gender": "male",
-      "imageUrl": "avatar('Daemon III Blackfyre', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daemon_Blackfyre.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daemon_Blackfyre",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["haegon-blackfyre"],
+      "parents": [
+        "haegon-blackfyre"
+      ],
       "spouses": []
     },
     {
@@ -911,12 +1378,20 @@
       "title": "Prince Valarr (The Young Prince)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Valarr Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Valarr_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Valarr_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["baelor-breakspear", "jena-dondarrion"],
+      "parents": [
+        "baelor-breakspear",
+        "jena-dondarrion"
+      ],
       "spouses": [
-        { "id": "kiera-of-tyrosh", "nome": "Kiera of Tyrosh", "corTexto": "#d4a0a0" }
+        {
+          "id": "kiera-of-tyrosh",
+          "nome": "Kiera of Tyrosh",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -925,12 +1400,20 @@
       "title": "Prince Aerion (Brightflame)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aerion Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aerion_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aerion_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "parents": [
+        "maekar-i-targaryen",
+        "dyanna-dayne"
+      ],
       "spouses": [
-        { "id": "daenora-targaryen", "nome": "Daenora Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "daenora-targaryen",
+          "nome": "Daenora Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -939,10 +1422,14 @@
       "title": "Maester Aemon",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Maester Aemon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aemon_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "parents": [
+        "maekar-i-targaryen",
+        "dyanna-dayne"
+      ],
       "spouses": []
     },
     {
@@ -951,12 +1438,20 @@
       "title": "King Jaehaerys II",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Jaehaerys II Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Jaehaerys_II_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Jaehaerys_II_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "parents": [
+        "maekar-i-targaryen",
+        "dyanna-dayne"
+      ],
       "spouses": [
-        { "id": "shaera-targaryen", "nome": "Shaera Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "shaera-targaryen",
+          "nome": "Shaera Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -965,12 +1460,20 @@
       "title": "Queen Shaera",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Shaera Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Shaera_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Shaera_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "parents": [
+        "maekar-i-targaryen",
+        "dyanna-dayne"
+      ],
       "spouses": [
-        { "id": "jaehaerys-ii-targaryen", "nome": "Jaehaerys II Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "jaehaerys-ii-targaryen",
+          "nome": "Jaehaerys II Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -979,12 +1482,20 @@
       "title": "Princess Rhaelle",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaelle Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaelle_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaelle_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "parents": [
+        "maekar-i-targaryen",
+        "dyanna-dayne"
+      ],
       "spouses": [
-        { "id": "ormund-baratheon", "nome": "Ormund Baratheon", "corTexto": "#d4a0a0" }
+        {
+          "id": "ormund-baratheon",
+          "nome": "Ormund Baratheon",
+          "corTexto": "#d4a0a0"
+        }
       ]
     }
   ],
@@ -995,10 +1506,14 @@
       "title": "Prince Maegor",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Maegor Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Maegor_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Maegor_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aerion-brightflame", "daenora-targaryen"],
+      "parents": [
+        "aerion-brightflame",
+        "daenora-targaryen"
+      ],
       "spouses": []
     },
     {
@@ -1007,12 +1522,20 @@
       "title": "King Aerys II (The Mad King)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aerys Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aerys_II_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aerys_II_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["jaehaerys-ii-targaryen", "shaera-targaryen"],
+      "parents": [
+        "jaehaerys-ii-targaryen",
+        "shaera-targaryen"
+      ],
       "spouses": [
-        { "id": "rhaella-targaryen", "nome": "Rhaella Targaryen", "corTexto": "#d4a0a0" }
+        {
+          "id": "rhaella-targaryen",
+          "nome": "Rhaella Targaryen",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -1021,12 +1544,20 @@
       "title": "Queen Rhaella",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaella Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaella_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaella_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["jaehaerys-ii-targaryen", "shaera-targaryen"],
+      "parents": [
+        "jaehaerys-ii-targaryen",
+        "shaera-targaryen"
+      ],
       "spouses": [
-        { "id": "aerys-ii-targaryen", "nome": "Aerys II Targaryen", "corTexto": "#c89b3c" }
+        {
+          "id": "aerys-ii-targaryen",
+          "nome": "Aerys II Targaryen",
+          "corTexto": "#c89b3c"
+        }
       ]
     },
     {
@@ -1035,10 +1566,14 @@
       "title": "Steffon Baratheon",
       "house": "Baratheon",
       "gender": "male",
-      "imageUrl": "avatar('Steffon Baratheon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Steffon_Baratheon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Steffon_Baratheon",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["ormund-baratheon", "rhaelle-targaryen"],
+      "parents": [
+        "ormund-baratheon",
+        "rhaelle-targaryen"
+      ],
       "spouses": []
     }
   ],
@@ -1049,13 +1584,25 @@
       "title": "Prince Rhaegar (The Last Dragon)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Rhaegar Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaegar_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaegar_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aerys-ii-targaryen", "rhaella-targaryen"],
+      "parents": [
+        "aerys-ii-targaryen",
+        "rhaella-targaryen"
+      ],
       "spouses": [
-        { "id": "elia-martell", "nome": "Elia Martell", "corTexto": "#d4a0a0" },
-        { "id": "lyanna-stark", "nome": "Lyanna Stark", "corTexto": "#d4a0a0" }
+        {
+          "id": "elia-martell",
+          "nome": "Elia Martell",
+          "corTexto": "#d4a0a0"
+        },
+        {
+          "id": "lyanna-stark",
+          "nome": "Lyanna Stark",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -1064,10 +1611,14 @@
       "title": "Prince Viserys (The Beggar King)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Viserys Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Viserys_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Viserys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["aerys-ii-targaryen", "rhaella-targaryen"],
+      "parents": [
+        "aerys-ii-targaryen",
+        "rhaella-targaryen"
+      ],
       "spouses": []
     },
     {
@@ -1076,13 +1627,25 @@
       "title": "Queen Daenerys (Stormborn)",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Daenerys Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daenerys_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daenerys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["aerys-ii-targaryen", "rhaella-targaryen"],
+      "parents": [
+        "aerys-ii-targaryen",
+        "rhaella-targaryen"
+      ],
       "spouses": [
-        { "id": "khal-drogo", "nome": "Khal Drogo", "corTexto": "#d4a0a0" },
-        { "id": "hizdahr-zo-loraq", "nome": "Hizdahr zo Loraq", "corTexto": "#d4a0a0" }
+        {
+          "id": "khal-drogo",
+          "nome": "Khal Drogo",
+          "corTexto": "#d4a0a0"
+        },
+        {
+          "id": "hizdahr-zo-loraq",
+          "nome": "Hizdahr zo Loraq",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -1091,12 +1654,19 @@
       "title": "King Robert Baratheon (The Usurper)",
       "house": "Baratheon",
       "gender": "male",
-      "imageUrl": "avatar('Robert Baratheon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Robert_Baratheon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Robert_Baratheon",
       "isBastard": false,
       "isKingOrQueen": true,
-      "parents": ["steffon-baratheon"],
+      "parents": [
+        "steffon-baratheon"
+      ],
       "spouses": [
-        { "id": "cersei-lannister", "nome": "Cersei Lannister", "corTexto": "#d4a0a0" }
+        {
+          "id": "cersei-lannister",
+          "nome": "Cersei Lannister",
+          "corTexto": "#d4a0a0"
+        }
       ]
     },
     {
@@ -1105,10 +1675,13 @@
       "title": "Stannis Baratheon (The Lord of Light)",
       "house": "Baratheon",
       "gender": "male",
-      "imageUrl": "avatar('Stannis Baratheon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Stannis_Baratheon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Stannis_Baratheon",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["steffon-baratheon"],
+      "parents": [
+        "steffon-baratheon"
+      ],
       "spouses": []
     },
     {
@@ -1117,10 +1690,13 @@
       "title": "Renly Baratheon",
       "house": "Baratheon",
       "gender": "male",
-      "imageUrl": "avatar('Renly Baratheon', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Renly_Baratheon.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Renly_Baratheon",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["steffon-baratheon"],
+      "parents": [
+        "steffon-baratheon"
+      ],
       "spouses": []
     }
   ],
@@ -1131,10 +1707,14 @@
       "title": "Princess Rhaenys",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "avatar('Rhaenys Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaenys_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaenys_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaegar-targaryen", "elia-martell"],
+      "parents": [
+        "rhaegar-targaryen",
+        "elia-martell"
+      ],
       "spouses": []
     },
     {
@@ -1143,10 +1723,14 @@
       "title": "Prince Aegon",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Aegon Targaryen', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aegon_Targaryen.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaegar-targaryen", "elia-martell"],
+      "parents": [
+        "rhaegar-targaryen",
+        "elia-martell"
+      ],
       "spouses": []
     },
     {
@@ -1155,10 +1739,14 @@
       "title": "Jon Snow (Aegon Targaryen)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Jon Snow', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Jon_Snow.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Jon_Snow",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["rhaegar-targaryen", "lyanna-stark"],
+      "parents": [
+        "rhaegar-targaryen",
+        "lyanna-stark"
+      ],
       "spouses": []
     },
     {
@@ -1167,10 +1755,14 @@
       "title": "Prince Rhaego",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "avatar('Rhaego', '1a0e0e')",
+      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaego.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaego",
       "isBastard": false,
       "isKingOrQueen": false,
-      "parents": ["daenerys-targaryen-gen13", "khal-drogo"],
+      "parents": [
+        "daenerys-targaryen-gen13",
+        "khal-drogo"
+      ],
       "spouses": []
     }
   ]

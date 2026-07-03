@@ -43,3 +43,23 @@ Acesse `http://localhost:4200` no seu navegador.
 
 O projeto possui uma Action no GitHub que publica automaticamente o build no GitHub Pages em cada commit na branch `main`:
 - [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
+
+## Próximos passos
+
+- Expandir a base de personagens com mais gerações e ramos colaterais da Casa Targaryen.
+- Padronizar e validar as imagens dos personagens, usando a wiki como referência principal.
+- Adicionar fotos dos atores para comparação visual com os personagens.
+- Incluir referências dos livros usados como fonte histórica e visual.
+
+## Referências úteis
+
+- Wiki principal: [A Wiki of Ice and Fire](https://awoiaf.westeros.org/)
+- Fotos dos atores: [IMDb - Game of Thrones cast](https://www.imdb.com/title/tt0944947/fullcredits/cast)
+- Fotos dos atores: [IMDb - House of the Dragon cast](https://www.imdb.com/title/tt11198330/fullcredits/cast)
+- Livros:
+	- [A Game of Thrones](https://www.georgerrmartin.com/books/ice-and-fire/a-game-of-thrones/)
+	- [A Clash of Kings](https://www.georgerrmartin.com/books/ice-and-fire/a-clash-of-kings/)
+	- [A Storm of Swords](https://www.georgerrmartin.com/books/ice-and-fire/a-storm-of-swords/)
+	- [A Feast for Crows](https://www.georgerrmartin.com/books/ice-and-fire/a-feast-for-crows/)
+	- [A Dance with Dragons](https://www.georgerrmartin.com/books/ice-and-fire/a-dance-with-dragons/)
+	- [Fire & Blood](https://www.georgerrmartin.com/books/fire-blood/)

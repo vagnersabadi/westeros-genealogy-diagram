@@ -119,6 +119,124 @@
           </p>
         </div>
       }
+
+      @if (selectedCharacter(); as character) {
+        @let images = selectedCharacterImages();
+        <div class="character-drawer-overlay" (click)="closeCharacter()">
+          <aside class="character-drawer" (click)="$event.stopPropagation()">
+            <div class="character-drawer__topbar">
+              <p class="character-drawer__kicker">Detalhe do personagem</p>
+              <button
+                type="button"
+                class="character-drawer__close"
+                (click)="closeCharacter()"
+                aria-label="Fechar"
+              >
+                ×
+              </button>
+            </div>
+
+            <div class="character-drawer__media">
+              <div class="character-drawer__frame">
+                @if (images.length > 1) {
+                  <button
+                    type="button"
+                    class="character-drawer__nav character-drawer__nav--prev"
+                    (click)="previousCharacterImage()"
+                    aria-label="Imagem anterior"
+                  >
+                    ←
+                  </button>
+                }
+
+                <img
+                  class="character-drawer__image"
+                  [src]="images[characterService.selectedImageIndex()]"
+                  [alt]="character.name"
+                />
+
+                @if (images.length > 1) {
+                  <button
+                    type="button"
+                    class="character-drawer__nav character-drawer__nav--next"
+                    (click)="nextCharacterImage()"
+                    aria-label="Próxima imagem"
+                  >
+                    →
+                  </button>
+                }
+              </div>
+
+              @if (images.length > 1) {
+                <div class="character-drawer__dots">
+                  @for (image of images; track $index) {
+                    <button
+                      type="button"
+                      class="character-drawer__dot"
+                      [class.character-drawer__dot--active]="characterService.selectedImageIndex() === $index"
+                      (click)="characterService.selectedImageIndex.set($index)"
+                      [attr.aria-label]="'Selecionar imagem ' + ($index + 1)"
+                    ></button>
+                  }
+                </div>
+              }
+            </div>
+
+            <div class="character-drawer__content">
+              <div>
+                <h2 class="character-drawer__name">{{ character.name }}</h2>
+                @if (character.title) {
+                  <p class="character-drawer__title">{{ character.title }}</p>
+                }
+
+                <div class="character-drawer__grid">
+                  <div class="character-drawer__card">
+                    <span class="character-drawer__label">Casa</span>
+                    <span class="character-drawer__value">{{ character.house }}</span>
+                  </div>
+                  <div class="character-drawer__card">
+                    <span class="character-drawer__label">Status</span>
+                    <span class="character-drawer__value">
+                      {{ character.isKingOrQueen ? 'Rei / Rainha' : 'Nobre' }}
+                    </span>
+                  </div>
+                  <div class="character-drawer__card">
+                    <span class="character-drawer__label">Origem</span>
+                    <span class="character-drawer__value">
+                      {{ character.isBastard ? 'Bastardo(a)' : 'Legítimo(a)' }}
+                    </span>
+                  </div>
+                  <div class="character-drawer__card">
+                    <span class="character-drawer__label">Imagens</span>
+                    <span class="character-drawer__value">{{ images.length }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="character-drawer__actions">
+                @if (character.wikiUrl) {
+                  <a
+                    class="character-drawer__wiki"
+                    [href]="character.wikiUrl"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Abrir wiki
+                  </a>
+                }
+
+                <button
+                  type="button"
+                  class="character-drawer__secondary"
+                  (click)="closeCharacter()"
+                >
+                  Fechar card
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      }
     </div>
   </main>
 </div>
