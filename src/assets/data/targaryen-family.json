@@ -1172,58 +1172,6 @@
       "isKingOrQueen": false,
       "parents": ["daenerys-targaryen-gen13", "khal-drogo"],
       "spouses": []
-    },
-    {
-      "id": "joffrey-baratheon",
-      "name": "Joffrey Baratheon",
-      "title": "King Joffrey Baratheon",
-      "house": "Baratheon",
-      "gender": "male",
-      "imageUrl": "avatar('Joffrey Baratheon', '1a0e0e')",
-      "isBastard": true,
-      "isKingOrQueen": true,
-      "parents": ["cersei-lannister", "jaime-lannister"],
-      "spouses": [
-        { "id": "margaery-tyrell", "nome": "Margaery Tyrell", "corTexto": "#d4a0a0" }
-      ]
-    },
-    {
-      "id": "myrcella-baratheon",
-      "name": "Myrcella Baratheon",
-      "title": "Princess Myrcella",
-      "house": "Baratheon",
-      "gender": "female",
-      "imageUrl": "avatar('Myrcella Baratheon', '1a0e0e')",
-      "isBastard": true,
-      "isKingOrQueen": false,
-      "parents": ["cersei-lannister", "jaime-lannister"],
-      "spouses": []
-    },
-    {
-      "id": "tommen-baratheon",
-      "name": "Tommen Baratheon",
-      "title": "King Tommen Baratheon",
-      "house": "Baratheon",
-      "gender": "male",
-      "imageUrl": "avatar('Tommen Baratheon', '1a0e0e')",
-      "isBastard": true,
-      "isKingOrQueen": true,
-      "parents": ["cersei-lannister", "jaime-lannister"],
-      "spouses": [
-        { "id": "margaery-tyrell", "nome": "Margaery Tyrell", "corTexto": "#d4a0a0" }
-      ]
-    },
-    {
-      "id": "shireen-baratheon",
-      "name": "Shireen Baratheon",
-      "title": "Princess Shireen",
-      "house": "Baratheon",
-      "gender": "female",
-      "imageUrl": "avatar('Shireen Baratheon', '1a0e0e')",
-      "isBastard": false,
-      "isKingOrQueen": false,
-      "parents": ["stannis-baratheon"],
-      "spouses": []
     }
   ]
 }
