@@ -295,6 +295,13 @@ export function calculateLayout(
     // Edge from spouse-label group to this character
     const hasSpouseGroup = nodes.some(n => n.id === `${char.id}-spouses`);
     if (hasSpouseGroup) {
+      const spouseLabels: Spouse[] = [
+        ...char.spouses
+          .filter(s => activeIds.has(s.id) && childlessSpouses.has(s.id))
+          .map(s => ({ id: s.id, nome: s.nome, corTexto: s.corTexto })),
+        ...ghostSpouses(char).map(s => ({ id: s.id, nome: s.nome, corTexto: s.corTexto }))
+      ];
+
       const edgeKey = `${char.id}-spousegroup`;
       if (!spousalEdgeIds.has(edgeKey)) {
         spousalEdgeIds.add(edgeKey);
@@ -307,7 +314,9 @@ export function calculateLayout(
           data: {
             isSpouseConnection: true,
             spouse1Id: `${char.id}-spouses`,
-            spouse2Id: char.id
+            spouse2Id: char.id,
+            spouseCount: spouseLabels.length,
+            spouseLabels
           }
         });
       }

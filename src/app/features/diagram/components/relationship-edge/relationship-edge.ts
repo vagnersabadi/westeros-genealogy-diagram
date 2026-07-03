@@ -77,9 +77,28 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
       relationType = 'União / Casamento';
 
       if (s1Id && s1Id.endsWith("-spouses")) {
-        relationType = 'União com múltiplas esposas';
-        participants = 'Maegor I Targaryen ➔ Esposas';
-        description = 'Lista de casamentos de Maegor I Targaryen.';
+        const spouseLabels = Array.isArray(edgeData.spouseLabels) ? edgeData.spouseLabels : [];
+        const spouseCount = Number(edgeData.spouseCount || spouseLabels.length || 0);
+        const ownerId = s1Id.replace(/-spouses$/, '');
+        const owner = this.charMap().get(ownerId);
+        const spouseNames = spouseLabels
+          .map((spouse: any) => spouse?.nome)
+          .filter(Boolean)
+          .join(' · ');
+
+        if (spouseCount > 1) {
+          relationType = 'União com múltiplas esposas';
+          participants = owner ? `${owner.name} ➔ Esposas` : 'Esposas';
+          description = owner
+            ? `Lista de casamentos de ${owner.name}.`
+            : 'Lista de casamentos.';
+        } else {
+          relationType = 'União / Casamento';
+          participants = owner && spouseNames ? `${owner.name} ⚭ ${spouseNames}` : 'União';
+          description = owner && spouseNames
+            ? `Casamento entre ${owner.name} e ${spouseNames}.`
+            : 'União matrimonial entre dois personagens.';
+        }
       } else {
         const c1 = this.charMap().get(s1Id);
         const c2 = this.charMap().get(s2Id);
@@ -154,7 +173,8 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
 
       // If it's a spouse group (childless spouses list node)
       if (s1Id && s1Id.endsWith("-spouses")) {
-        return "Casamentos";
+        const spouseCount = Number(edgeData.spouseCount || 0);
+        return spouseCount > 1 ? "Casamentos" : "Cônjuge";
       }
 
       const c1 = this.charMap().get(s1Id);
@@ -296,6 +316,15 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
             color: "#f4a261",
             dash: "",
             width: 3,
+          };
+        }
+
+        const spouseCount = Number(edgeData.spouseCount || 0);
+        if (s1Id && s1Id.endsWith("-spouses") && spouseCount <= 1) {
+          return {
+            color: "#c89b3c",
+            dash: "",
+            width: 2.5,
           };
         }
       }
