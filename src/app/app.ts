@@ -1,5 +1,6 @@
-import { Component, computed, signal, inject, Injector } from '@angular/core';
+import { Component, computed, signal, inject, Injector, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { toSignal } from '@angular/core/rxjs-interop';
 import {
   NgDiagramBackgroundComponent,
   NgDiagramComponent,
@@ -21,6 +22,7 @@ import { calculateLayout } from './core/utils/layout.engine';
 @Component({
   selector: 'app-root',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     NgDiagramComponent,
     NgDiagramBackgroundComponent,
@@ -34,12 +36,14 @@ import { calculateLayout } from './core/utils/layout.engine';
 export class App {
   private injector = inject(Injector);
   private viewportService = inject(NgDiagramViewportService);
-  readonly characterService = inject(CharacterService);
-  
-  // Characters loaded from service
-  characters = signal<Character[]>([]);
+  private characterService = inject(CharacterService);
 
-  selectedCharacter = computed(() => this.characterService.selectedCharacter());
+  // Characters loaded via toSignal — no manual subscription needed
+  characters = toSignal(this.characterService.getAllCharacters(), { initialValue: [] as Character[] });
+
+  // Expose service signals needed by the template
+  selectedCharacter = this.characterService.selectedCharacter;
+  selectedImageIndex = this.characterService.selectedImageIndex;
 
   selectedCharacterImages = computed(() => {
     const character = this.selectedCharacter();
@@ -55,12 +59,7 @@ export class App {
     return [character.imageUrl, ...extraImages].filter(Boolean);
   });
 
-  // Load characters from service on initialization
-  constructor() {
-    this.characterService.getAllCharacters().subscribe(chars => {
-      this.characters.set(chars);
-    });
-  }
+  constructor() {}
 
   // Register node and edge templates
   nodeTemplateMap = new NgDiagramNodeTemplateMap([

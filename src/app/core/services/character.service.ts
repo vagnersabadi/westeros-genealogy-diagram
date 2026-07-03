@@ -1,7 +1,8 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, inject, signal, DestroyRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
+import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { Character } from '../models/character.model';
 
 interface CharacterDTO {
@@ -28,14 +29,18 @@ interface GenerationsData {
   providedIn: 'root'
 })
 export class CharacterService {
-  private charactersSubject = new BehaviorSubject<Character[]>([]);
-  public characters$ = this.charactersSubject.asObservable();
+  private http = inject(HttpClient);
+  private destroyRef = inject(DestroyRef);
+
+  private _characters = signal<Character[]>([]);
+  public characters$ = toObservable(this._characters);
+
   public selectedCharacter = signal<Character | null>(null);
   public selectedImageIndex = signal(0);
 
   private generationsData: GenerationsData | null = null;
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.loadCharactersFromJSON();
   }
 
@@ -47,11 +52,12 @@ export class CharacterService {
       .get<GenerationsData>('assets/data/targaryen-family.json')
       .pipe(
         map((data) => this.processGenerations(data)),
-        tap((characters) => this.charactersSubject.next(characters)),
+        tap((characters) => this._characters.set(characters)),
         catchError((error) => {
           console.error('Erro ao carregar dados dos personagens:', error);
           return of([]);
-        })
+        }),
+        takeUntilDestroyed(this.destroyRef)
       )
       .subscribe();
   }

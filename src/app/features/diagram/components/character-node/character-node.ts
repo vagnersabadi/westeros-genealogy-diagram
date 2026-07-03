@@ -1,4 +1,4 @@
-import { Component, computed, input, inject } from '@angular/core';
+import { Component, computed, input, inject, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass } from '@angular/common';
 import {
   NgDiagramNodeSelectedDirective,
@@ -12,6 +12,7 @@ import type { Character, Spouse } from '../../../../core/models/character.model'
 @Component({
   selector: 'app-character-node',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgDiagramPortComponent, NgClass],
   hostDirectives: [
     { directive: NgDiagramNodeSelectedDirective, inputs: ['node'] },

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Component, ChangeDetectionStrategy, inject, signal, computed } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { Character } from '../../core/models/character.model';
 import { CharacterService } from '../../core/services/character.service';
 
@@ -11,32 +10,34 @@ import { CharacterService } from '../../core/services/character.service';
 @Component({
   selector: 'app-characters-list',
   standalone: true,
-  imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [],
   template: `
     <div class="characters-container">
       <h1>Árvore Genealógica Targaryen</h1>
 
       <!-- Botões para filtrar -->
       <div class="filters">
-        <button (click)="loadAllCharacters()">Todos</button>
-        <button (click)="loadKingsAndQueens()">Reis/Rainhas</button>
-        <button *ngFor="let gen of generations" (click)="loadGeneration(gen)">
-          {{ gen }}
-        </button>
+        <button (click)="setFilter('all')">Todos</button>
+        <button (click)="setFilter('kings')">Reis/Rainhas</button>
+        @for (gen of generations(); track gen) {
+          <button (click)="setFilter(gen)">{{ gen }}</button>
+        }
       </div>
 
       <!-- Lista de personagens -->
       <div class="characters-list">
-        <div
-          *ngFor="let character of characters$ | async"
-          class="character-card"
-        >
-          <img [src]="character.imageUrl" [alt]="character.name" />
-          <h3>{{ character.name }}</h3>
-          <p class="title">{{ character.title }}</p>
-          <p class="house">Casa: {{ character.house }}</p>
-          <p *ngIf="character.isKingOrQueen" class="royalty">👑 Rei/Rainha</p>
-        </div>
+        @for (character of filteredCharacters(); track character.id) {
+          <div class="character-card">
+            <img [src]="character.imageUrl" [alt]="character.name" />
+            <h3>{{ character.name }}</h3>
+            <p class="title">{{ character.title }}</p>
+            <p class="house">Casa: {{ character.house }}</p>
+            @if (character.isKingOrQueen) {
+              <p class="royalty">👑 Rei/Rainha</p>
+            }
+          </div>
+        }
       </div>
     </div>
   `,
@@ -116,29 +117,36 @@ import { CharacterService } from '../../core/services/character.service';
     `
   ]
 })
-export class CharactersListComponent implements OnInit {
-  characters$: Observable<Character[]>;
-  generations: string[] = [];
+export class CharactersListComponent {
+  private characterService = inject(CharacterService);
 
-  constructor(private characterService: CharacterService) {
-    this.characters$ = this.characterService.getAllCharacters();
-  }
+  private allCharacters = toSignal(this.characterService.getAllCharacters(), {
+    initialValue: [] as Character[]
+  });
 
-  ngOnInit(): void {
-    this.generations = this.characterService.getAvailableGenerations();
-  }
+  /** 'all' | 'kings' | generation key */
+  private activeFilter = signal<string>('all');
 
-  loadAllCharacters(): void {
-    this.characters$ = this.characterService.getAllCharacters();
-  }
+  generations = computed(() =>
+    this.characterService.getAvailableGenerations()
+  );
 
-  loadKingsAndQueens(): void {
-    this.characters$ = this.characterService.getKingsAndQueens();
-  }
+  filteredCharacters = computed<Character[]>(() => {
+    const filter = this.activeFilter();
+    const chars = this.allCharacters();
 
-  loadGeneration(generation: string): void {
-    this.characters$ = this.characterService.getCharactersByGeneration(
-      generation
-    );
+    if (filter === 'all') return chars;
+    if (filter === 'kings') return chars.filter((c) => c.isKingOrQueen);
+
+    // generation filter — synchronous because generationsData is in-memory
+    const genChars = this.characterService.getCharactersByGeneration(filter);
+    // getCharactersByGeneration returns a synchronous of() so we read it synchronously
+    let result: Character[] = [];
+    genChars.subscribe((c) => (result = c)).unsubscribe();
+    return result;
+  });
+
+  setFilter(value: string): void {
+    this.activeFilter.set(value);
   }
 }

@@ -151,7 +151,7 @@
 
                 <img
                   class="character-drawer__image"
-                  [src]="images[characterService.selectedImageIndex()]"
+                  [src]="images[selectedImageIndex()]"
                   [alt]="character.name"
                 />
 
@@ -173,8 +173,8 @@
                     <button
                       type="button"
                       class="character-drawer__dot"
-                      [class.character-drawer__dot--active]="characterService.selectedImageIndex() === $index"
-                      (click)="characterService.selectedImageIndex.set($index)"
+                      [class.character-drawer__dot--active]="selectedImageIndex() === $index"
+                      (click)="selectedImageIndex.set($index)"
                       [attr.aria-label]="'Selecionar imagem ' + ($index + 1)"
                     ></button>
                   }
