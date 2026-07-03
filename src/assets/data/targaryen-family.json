@@ -610,7 +610,7 @@
       "id": "alicent-hightower",
       "name": "Alicent Hightower",
       "title": "Queen of the Andals",
-      "house": "Targaryen",
+      "house": "Targaryen Green",
       "gender": "female",
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/83/Queen_Alicent.jpg/350px-Queen_Alicent.jpg",
       "imagesList": [
@@ -716,8 +716,8 @@
       "title": "The Realm's Delight",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Baelon_Targaryen.jpg",
-      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelon_Targaryen",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/1/1e/House_Targaryen.svg/50px-House_Targaryen.svg.png",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelon_Targaryen_(son_of_Viserys_I)",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": [
@@ -730,10 +730,16 @@
       "id": "aegon-ii",
       "name": "Aegon Targaryen",
       "title": "The Realm's Delight",
-      "house": "Targaryen",
+      "house": "Targaryen Green",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aegon_Targaryen.jpg",
-      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/4/46/AEGON_II.jpg/350px-AEGON_II.jpg",
+      "imagesList": [
+        "https://awoiaf.westeros.org/images/thumb/d/d7/Aegon_II_crowned.jpg/300px-Aegon_II_crowned.jpg",
+        "https://awoiaf.westeros.org/images/thumb/f/fc/King_Aegon_II_FAB.PNG/300px-King_Aegon_II_FAB.PNG",
+        "https://awoiaf.westeros.org/images/thumb/a/a3/Aegon_II_dead.PNG/300px-Aegon_II_dead.PNG",
+        "https://static.wikia.nocookie.net/gameofthrones/images/e/e7/King_Aegon_II_profile.png/revision/latest?cb=20221019094826"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_II_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": [
@@ -752,9 +758,12 @@
       "id": "helaena",
       "name": "Helaena Targaryen",
       "title": "The Realm's Delight",
-      "house": "Targaryen",
+      "house": "Targaryen Green",
       "gender": "female",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Helaena_Targaryen.jpg",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/f/f9/Helaena_Targaryen_by_Hylora.png/350px-Helaena_Targaryen_by_Hylora.png",
+      "imagesList": [
+        "https://static.wikia.nocookie.net/gameofthrones/images/e/ef/HelaenaTargaryenTLotT.PNG/revision/latest?cb=20221010083043"
+      ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Helaena_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
@@ -774,10 +783,10 @@
       "id": "daeron-i",
       "name": "Daeron Targaryen",
       "title": "The Daring",
-      "house": "Targaryen",
+      "house": "Targaryen Green",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Daeron_Targaryen.jpg",
-      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daeron_Targaryen",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/9/9b/Daeron_the_Daring_by_Lopata4.jpg/350px-Daeron_the_Daring_by_Lopata4.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daeron_Targaryen_(son_of_Viserys_I)",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": [
@@ -790,9 +799,12 @@
       "id": "aemond",
       "name": "Aemond Targaryen",
       "title": "One-Eye",
-      "house": "Targaryen",
+      "house": "Targaryen Green",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aemond_Targaryen.jpg",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/1/12/Aemond_Targaryen_by_Shen_Fei.jpg/350px-Aemond_Targaryen_by_Shen_Fei.jpg",
+      "imagesList": [
+      "https://awoiaf.westeros.org/images/thumb/7/7a/Aemond_Ewan_Mitchell.jpg/350px-Aemond_Ewan_Mitchell.jpg"
+      ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemond_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
@@ -808,7 +820,7 @@
       "title": "Lady of Driftmark",
       "house": "Velaryon",
       "gender": "female",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Laena_Velaryon.jpg",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/1/16/Laena_Velaryon_2_by_Riotarttherite.jpg/350px-Laena_Velaryon_2_by_Riotarttherite.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Laena_Velaryon",
       "isBastard": false,
       "isKingOrQueen": false,
@@ -824,13 +836,18 @@
         }
       ]
     },
+
     {
       "id": "rhaenyra",
       "name": "Rhaenyra Targaryen",
       "title": "The Realm's Delight",
       "house": "Targaryen",
       "gender": "female",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaenyra_Targaryen.jpg",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/a/a9/Rhaenyra.jpg/350px-Rhaenyra.jpg",
+      "imagesList": [
+      "https://awoiaf.westeros.org/images/thumb/3/30/Rhaenyra_on_the_Iron_Throne.jpg/350px-Rhaenyra_on_the_Iron_Throne.jpg",
+        "https://awoiaf.westeros.org/images/thumb/c/c3/Rhaenyra_Targaryen_TV_Series.jpg/300px-Rhaenyra_Targaryen_TV_Series.jpg"
+      ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaenyra_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
