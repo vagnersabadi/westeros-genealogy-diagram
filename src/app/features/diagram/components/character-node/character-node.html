@@ -8,13 +8,13 @@
       }
     </div>
   } @else if (character().isChildlessSpouse) {
-    <div class="c-node c-node--text-only" [class]="'house-' + character().house.toLowerCase()">
+    <div class="c-node c-node--text-only" [ngClass]="'house-' + character().house.toLowerCase()">
       <div class="c-node__name">{{ character().name }}</div>
     </div>
   } @else {
     <div
       class="c-node"
-      [class]="'house-' + character().house.toLowerCase()"
+      [ngClass]="'house-' + character().house.toLowerCase()"
       [class.is-royal]="character().isKingOrQueen"
       [class.is-bastard]="character().isBastard"
       [class.is-founder]="character().id === 'aegon-i'"

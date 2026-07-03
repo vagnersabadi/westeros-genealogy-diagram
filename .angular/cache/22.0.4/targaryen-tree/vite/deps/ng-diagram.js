@@ -2,7 +2,8 @@ import {
   CommonModule,
   NgComponentOutlet,
   isPlatformBrowser
-} from "./chunk-OUAYR6NM.js";
+} from "./chunk-XV5SVP7N.js";
+import "./chunk-VC3KO7XZ.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -18,9 +19,6 @@ import {
   PLATFORM_ID,
   Renderer2,
   ViewEncapsulation,
-  __objRest,
-  __spreadProps,
-  __spreadValues,
   computed,
   contentChild,
   effect,
@@ -78,7 +76,14 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuerySignal
-} from "./chunk-S23L7QED.js";
+} from "./chunk-UXIW3HKQ.js";
+import "./chunk-J46EEYGT.js";
+import "./chunk-4YCCEXQQ.js";
+import {
+  __objRest,
+  __spreadProps,
+  __spreadValues
+} from "./chunk-U7EDC2PH.js";
 
 // node_modules/ng-diagram/fesm2022/ng-diagram.mjs
 var _c0 = ["backgroundPattern"];

@@ -1,4 +1,5 @@
 import { Component, computed, input } from '@angular/core';
+import { NgClass } from '@angular/common';
 import {
   NgDiagramNodeSelectedDirective,
   NgDiagramPortComponent,
@@ -10,7 +11,7 @@ import type { Character, Spouse } from '../../../../core/models/character.model'
 @Component({
   selector: 'app-character-node',
   standalone: true,
-  imports: [NgDiagramPortComponent],
+  imports: [NgDiagramPortComponent, NgClass],
   hostDirectives: [
     { directive: NgDiagramNodeSelectedDirective, inputs: ['node'] },
   ],

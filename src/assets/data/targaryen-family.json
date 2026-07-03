@@ -1,0 +1,1229 @@
+{
+  "Geração 1": [
+    {
+      "id": "aegon-i",
+      "name": "Aegon I Targaryen",
+      "title": "The Conqueror, The Dragonlord, The Dragon",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegon I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": [],
+      "spouses": [
+        { "id": "visenya", "nome": "Visenya Targaryen", "corTexto": "#d4a0a0" },
+        { "id": "rhaenys", "nome": "Rhaenys Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "visenya",
+      "name": "Visenya Targaryen",
+      "title": "Queen Consort",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Visenya', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": [],
+      "spouses": [
+        { "id": "aegon-i", "nome": "Aegon I Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "rhaenys",
+      "name": "Rhaenys Targaryen",
+      "title": "Queen Consort",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaenys', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": [],
+      "spouses": [
+        { "id": "aegon-i", "nome": "Aegon I Targaryen", "corTexto": "#c89b3c" }
+      ]
+    }
+  ],
+  "Geração 2": [
+    {
+      "id": "aenys-i",
+      "name": "Aenys I Targaryen",
+      "title": "King of the Andals",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aenys I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["rhaenys"],
+      "spouses": [
+        { "id": "alyssa-velaryon", "nome": "Alyssa Velaryon", "corTexto": "#7ecfcf" }
+      ]
+    },
+    {
+      "id": "maegor-i",
+      "name": "Maegor I Targaryen",
+      "title": "The Cruel",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Maegor I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["visenya"],
+      "spouses": [
+        { "id": "ceryse-hightower", "nome": "Ceryse Hightower", "corTexto": "#a8d5a2" },
+        { "id": "alys-harroway", "nome": "Alys Harroway", "corTexto": "#b0b0b0" },
+        { "id": "tyanna-towers", "nome": "Tyanna of the Towers", "corTexto": "#c09fd8" },
+        { "id": "elinor-costayne", "nome": "Elinor Costayne", "corTexto": "#90bcd4" },
+        { "id": "jeyne-westerling", "nome": "Jeyne Westerling", "corTexto": "#90bcd4" }
+      ]
+    },
+    {
+      "id": "alyssa-velaryon",
+      "name": "Alyssa Velaryon",
+      "title": "Queen Consort",
+      "house": "Velaryon",
+      "gender": "female",
+      "imageUrl": "avatar('Alyssa V', '0f2027')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": [],
+      "spouses": [
+        { "id": "aenys-i", "nome": "Aenys I Targaryen", "corTexto": "#c89b3c" }
+      ]
+    }
+  ],
+  "Geração 3": [
+    {
+      "id": "aegon-uncrowned",
+      "name": "Aegon Targaryen",
+      "title": "The Uncrowned",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Rhaena I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aenys-i", "alyssa-velaryon"],
+      "spouses": [
+        { "id": "rhaena", "nome": "Rhaena Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "rhaena",
+      "name": "Rhaena Targaryen",
+      "title": "Queen",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaena I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["alyssa-velaryon"],
+      "spouses": [
+        { "id": "aegon-uncrowned", "nome": "Aegon Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "alysanne",
+      "name": "Alysanne Targaryen",
+      "title": "Good Queen Alysanne",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Alysanne', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aenys-i", "alyssa-velaryon"],
+      "spouses": [
+        { "id": "jaehaerys-i", "nome": "Jaehaerys I Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "jaehaerys-i",
+      "name": "Jaehaerys I Targaryen",
+      "title": "The Conciliator",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Jaehaerys I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aenys-i", "alyssa-velaryon"],
+      "spouses": [
+        { "id": "alysanne", "nome": "Alysanne Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "viserys-i",
+      "name": "Viserys Targaryen",
+      "title": "Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Viserys I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aenys-i", "alyssa-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "vaella",
+      "name": "Vaella",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Vaella', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aenys-i", "alyssa-velaryon"],
+      "spouses": []
+    }
+  ],
+  "Geração 4": [
+    {
+      "id": "baelon",
+      "name": "Baelon Targaryen",
+      "title": "The Brave",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Baelon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": [
+        { "id": "alyssa-t", "nome": "Alyssa Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "alyssa-t",
+      "name": "Alyssa Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Alyssa T', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": [
+        { "id": "baelon", "nome": "Baelon Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "aegon-j-a",
+      "name": "Aegon Targaryen",
+      "title": "Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "daenerys-i",
+      "name": "Daenerys Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "aemon",
+      "name": "Aemon Targaryen",
+      "title": "Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aemon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": [
+        { "id": "jocelyn", "nome": "Jocelyn Baratheon", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "maegelle",
+      "name": "Maegelle Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Maegelle', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "vaegon",
+      "name": "Vaegon Targaryen",
+      "title": "Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Vaegon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "daella",
+      "name": "Daella Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Daella', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": [
+        { "id": "rodrik-arryn", "nome": "Rodrik Arryn", "corTexto": "#90bcd4" }
+      ]
+    },
+    {
+      "id": "saera",
+      "name": "Saera Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Saera', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "viserra",
+      "name": "Viserra Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Viserra', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "gaemon",
+      "name": "Gaemon Targaryen",
+      "title": "Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Gaemon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "valerion",
+      "name": "Valerion Targaryen",
+      "title": "Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Valerion', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "gael",
+      "name": "Gael Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Gael', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["jaehaerys-i", "alysanne"],
+      "spouses": []
+    },
+    {
+      "id": "aerea",
+      "name": "Aerea Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Aerea', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaena", "aegon-uncrowned"],
+      "spouses": []
+    },
+    {
+      "id": "rhaella",
+      "name": "Rhaella Targaryen",
+      "title": "Princess",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaella', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaena", "aegon-uncrowned"],
+      "spouses": []
+    }
+  ],
+  "Geração 5": [
+    {
+      "id": "viserys-i-king",
+      "name": "Viserys I Targaryen",
+      "title": "King of the Andals",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Viserys I', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["baelon", "alyssa-t"],
+      "spouses": [
+        { "id": "aemma-arryn", "nome": "Aemma Arryn", "corTexto": "#90bcd4" },
+        { "id": "alicent-hightower", "nome": "Alicent Hightower", "corTexto": "#90bcd4" }
+      ]
+    },
+    {
+      "id": "aemma-arryn",
+      "name": "Aemma Arryn",
+      "title": "Queen of the Andals",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Aemma Arryn', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": [],
+      "spouses": [
+        { "id": "viserys-i-king", "nome": "Viserys I Targaryen", "corTexto": "#90bcd4" }
+      ]
+    },
+    {
+      "id": "alicent-hightower",
+      "name": "Alicent Hightower",
+      "title": "Queen of the Andals",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Alicent Hightower', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["otto-hightower"],
+      "spouses": [
+        { "id": "viserys-i-king", "nome": "Viserys I Targaryen", "corTexto": "#90bcd4" }
+      ]
+    },
+    {
+      "id": "daemon",
+      "name": "Daemon Targaryen",
+      "title": "The Rogue Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Daemon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["baelon", "alyssa-t"],
+      "spouses": [
+        { "id": "rhaenyra", "nome": "Rhaenyra Targaryen", "corTexto": "#d4a0a0" },
+        { "id": "laena-velaryon", "nome": "Laena Velaryon", "corTexto": "#d4a0a0" },
+        { "id": "rhea-royce", "nome": "Rhea Royce", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "rhaenys-ii",
+      "name": "Rhaenys Targaryen",
+      "title": "The Queen Who Never Was",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaenys', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aemon", "jocelyn"],
+      "spouses": [
+        { "id": "corlys-velaryon", "nome": "Corlys Velaryon", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "aegon-iv",
+      "name": "Aegon Targaryen",
+      "title": "Prince",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["baelon", "alyssa-t"],
+      "spouses": []
+    }
+  ],
+  "Geração 6": [
+    {
+      "id": "baelon-v-a",
+      "name": "Baelon Targaryen",
+      "title": "The Realm's Delight",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Baelon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-i-king", "aemma-arryn"],
+      "spouses": []
+    },
+    {
+      "id": "aegon-ii",
+      "name": "Aegon Targaryen",
+      "title": "The Realm's Delight",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-i-king", "alicent-hightower"],
+      "spouses": [
+        { "id": "helaena", "nome": "Helaena Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "helaena",
+      "name": "Helaena Targaryen",
+      "title": "The Realm's Delight",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Helaena', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-i-king", "alicent-hightower"],
+      "spouses": [
+        { "id": "aegon-ii", "nome": "Aegon Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "daeron-i",
+      "name": "Daeron Targaryen",
+      "title": "The Daring",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Daeron', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-i-king", "alicent-hightower"],
+      "spouses": []
+    },
+    {
+      "id": "aemond",
+      "name": "Aemond Targaryen",
+      "title": "One-Eye",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aemond', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-i-king", "alicent-hightower"],
+      "spouses": []
+    },
+    {
+      "id": "laena-velaryon",
+      "name": "Laena Velaryon",
+      "title": "Lady of Driftmark",
+      "house": "Velaryon",
+      "gender": "female",
+      "imageUrl": "avatar('Laena Velaryon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaenys-ii", "corlys-velaryon"],
+      "spouses": [
+        { "id": "daemon", "nome": "Daemon Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "rhaenyra",
+      "name": "Rhaenyra Targaryen",
+      "title": "The Realm's Delight",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaenyra', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-i-king", "aemma-arryn"],
+      "spouses": [
+        { "id": "daemon", "nome": "Daemon Targaryen", "corTexto": "#c89b3c" },
+        { "id": "laenor-velaryon", "nome": "Laenor Velaryon", "corTexto": "#c89b3c" }
+      ]
+    }
+  ],
+  "Geração 7": [
+    {
+      "id": "jacaerys-velaryon",
+      "name": "Jacaerys Velaryon",
+      "title": "Prince of Dragonstone",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Jacaerys Velaryon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaenyra", "laenor-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "lucerys-velaryon",
+      "name": "Lucerys Velaryon",
+      "title": "Prince of Dragonstone",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Lucerys Velaryon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaenyra", "laenor-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "joffrey-velaryon",
+      "name": "Joffrey Velaryon",
+      "title": "Prince of Dragonstone",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Joffrey Velaryon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaenyra", "laenor-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "aegon-targaryen-iii",
+      "name": "Aegon III Targaryen",
+      "title": "Aegon III, The Dragonbane",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegon Targaryen III', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["rhaenyra", "laenor-velaryon"],
+      "spouses": [
+        { "id": "daena-velaryon", "nome": "Daena Velaryon", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "viserys-ii-targaryen",
+      "name": "Viserys II Targaryen",
+      "title": "Viserys II Targaryen",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["rhaenyra", "laenor-velaryon"],
+      "spouses": [
+        { "id": "larra-rogare", "nome": "Larra Rogare", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "visenya-targaryen",
+      "name": "Visenya Targaryen",
+      "title": "Visenya Targaryen",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaenyra", "laenor-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "baela-targaryen",
+      "name": "Baela Targaryen",
+      "title": "Baela of Hull",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Baela Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon", "laena-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "rhaena-targaryen",
+      "name": "Rhaena Targaryen",
+      "title": "Rhaena of Hull",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaena Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon", "laena-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "jaehaerys-targaryen-iii",
+      "name": "Jaehaerys Targaryen",
+      "title": "Visenya Targaryen",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aegon-ii", "helaena"],
+      "spouses": []
+    },
+    {
+      "id": "jaehaera-targaryen",
+      "name": "Jaehaera Targaryen",
+      "title": "Visenya Targaryen",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Viserys Targaryen II', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aegon-ii", "helaena"],
+      "spouses": []
+    },
+    {
+      "id": "maelor-targaryen",
+      "name": "Maelor Targaryen",
+      "title": "Maelor Targaryen",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Maelor Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aegon-ii", "helaena"],
+      "spouses": []
+    }
+  ],
+  "Geração 8": [
+    {
+      "id": "daeron-i-targaryen",
+      "name": "Daeron Targaryen",
+      "title": "King Daeron I (The Young Dragon)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Daeron Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aegon-targaryen-iii", "daenaera-velaryon"],
+      "spouses": []
+    },
+    {
+      "id": "baelor-i-targaryen",
+      "name": "Baelor Targaryen",
+      "title": "King Baelor I (The Blessed)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Baelor Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aegon-targaryen-iii", "daenaera-velaryon"],
+      "spouses": [
+        { "id": "daena-targaryen", "nome": "Daena Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "daena-targaryen",
+      "name": "Daena Targaryen",
+      "title": "Queen Daena (The Defiant)",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Daena Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aegon-targaryen-iii", "daenaera-velaryon"],
+      "spouses": [
+        { "id": "baelor-i-targaryen", "nome": "Baelor I Targaryen", "corTexto": "#c89b3c" },
+        { "id": "aegon-iv-targaryen", "nome": "Aegon IV Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "aegon-iv-targaryen",
+      "name": "Aegon Targaryen",
+      "title": "King Aegon IV (The Unworthy)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegon Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-ii-targaryen", "larra-rogare"],
+      "spouses": [
+        { "id": "naerys-targaryen", "nome": "Naerys Targaryen", "corTexto": "#d4a0a0" },
+        { "id": "daena-targaryen", "nome": "Daena Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "aemon-dragonknight",
+      "name": "Aemon Targaryen",
+      "title": "Ser Aemon (The Dragonknight)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aemon Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["viserys-ii-targaryen", "larra-rogare"],
+      "spouses": []
+    },
+    {
+      "id": "naerys-targaryen",
+      "name": "Naerys Targaryen",
+      "title": "Queen Naerys",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Naerys Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["viserys-ii-targaryen", "larra-rogare"],
+      "spouses": [
+        { "id": "aegon-iv-targaryen", "nome": "Aegon IV Targaryen", "corTexto": "#c89b3c" }
+      ]
+    }
+  ],
+  "Geração 9": [
+    {
+      "id": "daemon-blackfyre",
+      "name": "Daemon Blackfyre",
+      "title": "Daemon Blackfyre (The King Who Bore the Sword)",
+      "house": "Blackfyre",
+      "gender": "male",
+      "imageUrl": "avatar('Daemon Blackfyre', '1a0e0e')",
+      "isBastard": true,
+      "isKingOrQueen": false,
+      "parents": ["aegon-iv-targaryen", "daena-targaryen"],
+      "spouses": [
+        { "id": "rohanne-of-tyrosh", "nome": "Rohanne of Tyrosh", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "aegor-rivers",
+      "name": "Aegor Rivers",
+      "title": "Bittersteel",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegor Rivers', '1a0e0e')",
+      "isBastard": true,
+      "isKingOrQueen": false,
+      "parents": ["aegon-iv-targaryen"],
+      "spouses": []
+    },
+    {
+      "id": "brynden-rivers",
+      "name": "Brynden Rivers",
+      "title": "Bloodraven (The Three-Eyed Crow)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Brynden Rivers', '1a0e0e')",
+      "isBastard": true,
+      "isKingOrQueen": false,
+      "parents": ["aegon-iv-targaryen"],
+      "spouses": []
+    },
+    {
+      "id": "daeron-ii-targaryen",
+      "name": "Daeron Targaryen",
+      "title": "King Daeron II (The Good)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Daeron Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aegon-iv-targaryen", "naerys-targaryen"],
+      "spouses": [
+        { "id": "myriah-martell", "nome": "Myriah Martell", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "daenerys-targaryen-gen9",
+      "name": "Daenerys Targaryen",
+      "title": "Princess Daenerys",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Daenerys Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aegon-iv-targaryen", "naerys-targaryen"],
+      "spouses": [
+        { "id": "maron-martell", "nome": "Maron Martell", "corTexto": "#d4a0a0" }
+      ]
+    }
+  ],
+  "Geração 10": [
+    {
+      "id": "haegon-blackfyre",
+      "name": "Haegon Blackfyre",
+      "title": "Haegon Blackfyre",
+      "house": "Blackfyre",
+      "gender": "male",
+      "imageUrl": "avatar('Haegon Blackfyre', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
+      "spouses": []
+    },
+    {
+      "id": "baelor-breakspear",
+      "name": "Baelor Targaryen",
+      "title": "Prince Baelor (Breakspear)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Baelor Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daeron-ii-targaryen", "myriah-martell"],
+      "spouses": [
+        { "id": "jena-dondarrion", "nome": "Jena Dondarrion", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "aerys-i-targaryen",
+      "name": "Aerys Targaryen",
+      "title": "King Aerys I (The Bookish)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aerys Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["daeron-ii-targaryen", "myriah-martell"],
+      "spouses": [
+        { "id": "aelinor-penrose", "nome": "Aelinor Penrose", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "maekar-i-targaryen",
+      "name": "Maekar Targaryen",
+      "title": "King Maekar I (The Anvil)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Maekar Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["daeron-ii-targaryen", "myriah-martell"],
+      "spouses": [
+        { "id": "dyanna-dayne", "nome": "Dyanna Dayne", "corTexto": "#d4a0a0" }
+      ]
+    }
+  ],
+  "Geração 11": [
+    {
+      "id": "daemon-iii-blackfyre",
+      "name": "Daemon III Blackfyre",
+      "title": "Daemon III Blackfyre",
+      "house": "Blackfyre",
+      "gender": "male",
+      "imageUrl": "avatar('Daemon III Blackfyre', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["haegon-blackfyre"],
+      "spouses": []
+    },
+    {
+      "id": "valarr-targaryen",
+      "name": "Valarr Targaryen",
+      "title": "Prince Valarr (The Young Prince)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Valarr Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["baelor-breakspear", "jena-dondarrion"],
+      "spouses": [
+        { "id": "kiera-of-tyrosh", "nome": "Kiera of Tyrosh", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "aerion-brightflame",
+      "name": "Aerion Targaryen",
+      "title": "Prince Aerion (Brightflame)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aerion Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "spouses": [
+        { "id": "daenora-targaryen", "nome": "Daenora Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "aemon-maester",
+      "name": "Aemon Targaryen",
+      "title": "Maester Aemon",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Maester Aemon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "spouses": []
+    },
+    {
+      "id": "jaehaerys-ii-targaryen",
+      "name": "Jaehaerys Targaryen",
+      "title": "King Jaehaerys II",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Jaehaerys II Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "spouses": [
+        { "id": "shaera-targaryen", "nome": "Shaera Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "shaera-targaryen",
+      "name": "Shaera Targaryen",
+      "title": "Queen Shaera",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Shaera Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "spouses": [
+        { "id": "jaehaerys-ii-targaryen", "nome": "Jaehaerys II Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "rhaelle-targaryen",
+      "name": "Rhaelle Targaryen",
+      "title": "Princess Rhaelle",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaelle Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["maekar-i-targaryen", "dyanna-dayne"],
+      "spouses": [
+        { "id": "ormund-baratheon", "nome": "Ormund Baratheon", "corTexto": "#d4a0a0" }
+      ]
+    }
+  ],
+  "Geração 12": [
+    {
+      "id": "maegor-targaryen-gen12",
+      "name": "Maegor Targaryen",
+      "title": "Prince Maegor",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Maegor Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aerion-brightflame", "daenora-targaryen"],
+      "spouses": []
+    },
+    {
+      "id": "aerys-ii-targaryen",
+      "name": "Aerys Targaryen",
+      "title": "King Aerys II (The Mad King)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aerys Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["jaehaerys-ii-targaryen", "shaera-targaryen"],
+      "spouses": [
+        { "id": "rhaella-targaryen", "nome": "Rhaella Targaryen", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "rhaella-targaryen",
+      "name": "Rhaella Targaryen",
+      "title": "Queen Rhaella",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaella Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["jaehaerys-ii-targaryen", "shaera-targaryen"],
+      "spouses": [
+        { "id": "aerys-ii-targaryen", "nome": "Aerys II Targaryen", "corTexto": "#c89b3c" }
+      ]
+    },
+    {
+      "id": "steffon-baratheon",
+      "name": "Steffon Baratheon",
+      "title": "Steffon Baratheon",
+      "house": "Baratheon",
+      "gender": "male",
+      "imageUrl": "avatar('Steffon Baratheon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["ormund-baratheon", "rhaelle-targaryen"],
+      "spouses": []
+    }
+  ],
+  "Geração 13": [
+    {
+      "id": "rhaegar-targaryen",
+      "name": "Rhaegar Targaryen",
+      "title": "Prince Rhaegar (The Last Dragon)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Rhaegar Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aerys-ii-targaryen", "rhaella-targaryen"],
+      "spouses": [
+        { "id": "elia-martell", "nome": "Elia Martell", "corTexto": "#d4a0a0" },
+        { "id": "lyanna-stark", "nome": "Lyanna Stark", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "viserys-targaryen-gen13",
+      "name": "Viserys Targaryen",
+      "title": "Prince Viserys (The Beggar King)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Viserys Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["aerys-ii-targaryen", "rhaella-targaryen"],
+      "spouses": []
+    },
+    {
+      "id": "daenerys-targaryen-gen13",
+      "name": "Daenerys Targaryen",
+      "title": "Queen Daenerys (Stormborn)",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Daenerys Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["aerys-ii-targaryen", "rhaella-targaryen"],
+      "spouses": [
+        { "id": "khal-drogo", "nome": "Khal Drogo", "corTexto": "#d4a0a0" },
+        { "id": "hizdahr-zo-loraq", "nome": "Hizdahr zo Loraq", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "robert-baratheon",
+      "name": "Robert Baratheon",
+      "title": "King Robert Baratheon (The Usurper)",
+      "house": "Baratheon",
+      "gender": "male",
+      "imageUrl": "avatar('Robert Baratheon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": true,
+      "parents": ["steffon-baratheon"],
+      "spouses": [
+        { "id": "cersei-lannister", "nome": "Cersei Lannister", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "stannis-baratheon",
+      "name": "Stannis Baratheon",
+      "title": "Stannis Baratheon (The Lord of Light)",
+      "house": "Baratheon",
+      "gender": "male",
+      "imageUrl": "avatar('Stannis Baratheon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["steffon-baratheon"],
+      "spouses": []
+    },
+    {
+      "id": "renly-baratheon",
+      "name": "Renly Baratheon",
+      "title": "Renly Baratheon",
+      "house": "Baratheon",
+      "gender": "male",
+      "imageUrl": "avatar('Renly Baratheon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["steffon-baratheon"],
+      "spouses": []
+    }
+  ],
+  "Geração 14": [
+    {
+      "id": "rhaenys-targaryen-gen14",
+      "name": "Rhaenys Targaryen",
+      "title": "Princess Rhaenys",
+      "house": "Targaryen",
+      "gender": "female",
+      "imageUrl": "avatar('Rhaenys Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaegar-targaryen", "elia-martell"],
+      "spouses": []
+    },
+    {
+      "id": "aegon-targaryen-gen14",
+      "name": "Aegon Targaryen",
+      "title": "Prince Aegon",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Aegon Targaryen', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaegar-targaryen", "elia-martell"],
+      "spouses": []
+    },
+    {
+      "id": "jon-snow",
+      "name": "Jon Snow",
+      "title": "Jon Snow (Aegon Targaryen)",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Jon Snow', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["rhaegar-targaryen", "lyanna-stark"],
+      "spouses": []
+    },
+    {
+      "id": "rhaego",
+      "name": "Rhaego",
+      "title": "Prince Rhaego",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "avatar('Rhaego', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daenerys-targaryen-gen13", "khal-drogo"],
+      "spouses": []
+    },
+    {
+      "id": "joffrey-baratheon",
+      "name": "Joffrey Baratheon",
+      "title": "King Joffrey Baratheon",
+      "house": "Baratheon",
+      "gender": "male",
+      "imageUrl": "avatar('Joffrey Baratheon', '1a0e0e')",
+      "isBastard": true,
+      "isKingOrQueen": true,
+      "parents": ["cersei-lannister", "jaime-lannister"],
+      "spouses": [
+        { "id": "margaery-tyrell", "nome": "Margaery Tyrell", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "myrcella-baratheon",
+      "name": "Myrcella Baratheon",
+      "title": "Princess Myrcella",
+      "house": "Baratheon",
+      "gender": "female",
+      "imageUrl": "avatar('Myrcella Baratheon', '1a0e0e')",
+      "isBastard": true,
+      "isKingOrQueen": false,
+      "parents": ["cersei-lannister", "jaime-lannister"],
+      "spouses": []
+    },
+    {
+      "id": "tommen-baratheon",
+      "name": "Tommen Baratheon",
+      "title": "King Tommen Baratheon",
+      "house": "Baratheon",
+      "gender": "male",
+      "imageUrl": "avatar('Tommen Baratheon', '1a0e0e')",
+      "isBastard": true,
+      "isKingOrQueen": true,
+      "parents": ["cersei-lannister", "jaime-lannister"],
+      "spouses": [
+        { "id": "margaery-tyrell", "nome": "Margaery Tyrell", "corTexto": "#d4a0a0" }
+      ]
+    },
+    {
+      "id": "shireen-baratheon",
+      "name": "Shireen Baratheon",
+      "title": "Princess Shireen",
+      "house": "Baratheon",
+      "gender": "female",
+      "imageUrl": "avatar('Shireen Baratheon', '1a0e0e')",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["stannis-baratheon"],
+      "spouses": []
+    }
+  ]
+}

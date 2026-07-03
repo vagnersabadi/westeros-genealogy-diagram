@@ -68,7 +68,7 @@
           [class.active]="selectedHouseTree() === house"
           (click)="setFilter(house)"
         >
-          <span class="house-indicator" [class]="'house-indicator--' + house.toLowerCase()"></span>
+          <span class="house-indicator" [ngClass]="'house-indicator--' + house.toLowerCase()"></span>
           House {{ house }}
         </button>
       }

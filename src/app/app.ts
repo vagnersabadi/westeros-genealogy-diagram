@@ -1,4 +1,5 @@
 import { Component, computed, signal, inject, Injector } from '@angular/core';
+import { NgClass } from '@angular/common';
 import {
   NgDiagramBackgroundComponent,
   NgDiagramComponent,
@@ -11,7 +12,8 @@ import {
   type Edge,
   type Node,
 } from 'ng-diagram';
-import { CHARACTERS_MOCK } from './core/mocks/characters-mock';
+import { CharacterService } from './core/services/character.service';
+import { Character } from './core/models/character.model';
 import { CharacterNode } from './features/diagram/components/character-node/character-node';
 import { RelationshipEdge } from './features/diagram/components/relationship-edge/relationship-edge';
 import { calculateLayout } from './core/utils/layout.engine';
@@ -22,7 +24,8 @@ import { calculateLayout } from './core/utils/layout.engine';
   imports: [
     NgDiagramComponent,
     NgDiagramBackgroundComponent,
-    NgDiagramMinimapComponent
+    NgDiagramMinimapComponent,
+    NgClass
   ],
   providers: [provideNgDiagram()],
   templateUrl: './app.html',
@@ -31,6 +34,17 @@ import { calculateLayout } from './core/utils/layout.engine';
 export class App {
   private injector = inject(Injector);
   private viewportService = inject(NgDiagramViewportService);
+  private characterService = inject(CharacterService);
+  
+  // Characters loaded from service
+  characters = signal<Character[]>([]);
+
+  // Load characters from service on initialization
+  constructor() {
+    this.characterService.getAllCharacters().subscribe(chars => {
+      this.characters.set(chars);
+    });
+  }
 
   // Register node and edge templates
   nodeTemplateMap = new NgDiagramNodeTemplateMap([
@@ -98,8 +112,8 @@ export class App {
     const activeTree = this.selectedHouseTree();
     const currentLayout = this.layoutDirection();
     
-    // Show full mock data for Targaryen, and empty canvas for other houses to be implemented later
-    const characters = activeTree === 'Targaryen' ? CHARACTERS_MOCK : [];
+    // Show full data for Targaryen, and empty canvas for other houses to be implemented later
+    const characters = activeTree === 'Targaryen' ? this.characters() : [];
 
     const { nodes, edges } = calculateLayout(
       characters,

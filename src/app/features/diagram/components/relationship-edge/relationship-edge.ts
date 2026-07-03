@@ -1,7 +1,7 @@
-import { Component, computed, input, inject, NO_ERRORS_SCHEMA } from '@angular/core';
+import { Component, computed, input, inject, NO_ERRORS_SCHEMA, signal } from '@angular/core';
 import { NgDiagramBaseEdgeComponent, type NgDiagramEdgeTemplate, type Edge } from 'ng-diagram';
 import { Character } from '../../../../core/models/character.model';
-import { CHARACTERS_MOCK } from '../../../../core/mocks/characters-mock';
+import { CharacterService } from '../../../../core/services/character.service';
 import { App } from '../../../../app';
 
 @Component({
@@ -32,9 +32,16 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
   edge = input.required<Edge>();
   
   private app = inject(App);
+  private characterService = inject(CharacterService);
+  private charMap = signal<Map<string, Character>>(new Map());
 
-  // Find relationships from mock data
-  private charMap = new Map<string, Character>(CHARACTERS_MOCK.map((c: Character) => [c.id, c]));
+  constructor() {
+    // Build character map when characters are loaded
+    this.characterService.getAllCharacters().subscribe(characters => {
+      const map = new Map<string, Character>(characters.map((c: Character) => [c.id, c]));
+      this.charMap.set(map);
+    });
+  }
 
   toggleSelect(event: MouseEvent) {
     event.stopPropagation();
@@ -54,8 +61,8 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
     let participants = '';
 
     if (edgeData.isChildConnection) {
-      const parent = this.charMap.get(edgeData.parentId);
-      const child = this.charMap.get(edgeData.childId);
+      const parent = this.charMap().get(edgeData.parentId);
+      const child = this.charMap().get(edgeData.childId);
       relationType = edgeData.isBastard ? 'Filiação Bastarda' : 'Filiação';
       if (parent && child) {
         participants = `${parent.name} ➔ ${child.name}`;
@@ -74,8 +81,8 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
         participants = 'Maegor I Targaryen ➔ Esposas';
         description = 'Lista de casamentos de Maegor I Targaryen.';
       } else {
-        const c1 = this.charMap.get(s1Id);
-        const c2 = this.charMap.get(s2Id);
+        const c1 = this.charMap().get(s1Id);
+        const c2 = this.charMap().get(s2Id);
         if (c1 && c2) {
           participants = `${c1.name} ⚭ ${c2.name}`;
           
@@ -150,8 +157,8 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
         return "Casamentos";
       }
 
-      const c1 = this.charMap.get(s1Id);
-      const c2 = this.charMap.get(s2Id);
+      const c1 = this.charMap().get(s1Id);
+      const c2 = this.charMap().get(s2Id);
 
       if (c1 && c2) {
         // Sibling marriage
@@ -166,8 +173,8 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
 
         // Uncle/Niece Marriage
         const isSibling = (idA: string, idB: string): boolean => {
-          const charA = this.charMap.get(idA);
-          const charB = this.charMap.get(idB);
+          const charA = this.charMap().get(idA);
+          const charB = this.charMap().get(idB);
           if (
             !charA ||
             !charB ||
@@ -229,8 +236,8 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
     if (edgeData.isSpouseConnection) {
       const s1Id = edgeData.spouse1Id;
       const s2Id = edgeData.spouse2Id;
-      const c1 = this.charMap.get(s1Id);
-      const c2 = this.charMap.get(s2Id);
+      const c1 = this.charMap().get(s1Id);
+      const c2 = this.charMap().get(s2Id);
 
       if (c1 && c2) {
         const shareParents =
@@ -247,8 +254,8 @@ export class RelationshipEdge implements NgDiagramEdgeTemplate {
         }
 
         const isSibling = (idA: string, idB: string): boolean => {
-          const charA = this.charMap.get(idA);
-          const charB = this.charMap.get(idB);
+          const charA = this.charMap().get(idA);
+          const charB = this.charMap().get(idB);
           if (
             !charA ||
             !charB ||
