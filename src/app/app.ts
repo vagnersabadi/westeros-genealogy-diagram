@@ -16,6 +16,7 @@ import {
 import { CharacterService } from './core/services/character.service';
 import { Character } from './core/models/character.model';
 import { CharacterNode } from './features/diagram/components/character-node/character-node';
+import { GroupNodeComponent } from './features/diagram/components/group-node/group-node';
 import { RelationshipEdge } from './features/diagram/components/relationship-edge/relationship-edge';
 import { calculateLayout } from './core/utils/layout.engine';
 
@@ -67,7 +68,7 @@ export class App {
     ['childless-spouse', CharacterNode],
     ['default', CharacterNode],
     ['selection', CharacterNode],
-    ['group', CharacterNode],
+    ['group', GroupNodeComponent],
     ['', CharacterNode]
   ]);
 

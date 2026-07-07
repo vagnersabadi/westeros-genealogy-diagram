@@ -208,6 +208,145 @@ export function calculateLayout(
     }
   }
 
+  // 6.5 Overlap resolution for subgroups
+  const housesToGroup = ['Blackfyre'];
+
+  for (const house of housesToGroup) {
+    const houseIds = characters.filter(c => c.house?.trim().toLowerCase() === house.toLowerCase()).map(c => c.id);
+    if (houseIds.length === 0) continue;
+
+    // Calculate bounding box of these characters
+    let minX = Infinity;
+    let minY = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    let hasPositions = false;
+
+    for (const id of houseIds) {
+      const pos = positions.get(id);
+      if (!pos) continue;
+      hasPositions = true;
+      const w = nodeWidth;
+      const h = nodeHeight;
+
+      if (pos.x < minX) minX = pos.x;
+      if (pos.y < minY) minY = pos.y;
+      if (pos.x + w > maxX) maxX = pos.x + w;
+      if (pos.y + h > maxY) maxY = pos.y + h;
+    }
+
+    if (!hasPositions) continue;
+
+    // Adjust for any spouse list nodes of characters in this house
+    for (const id of houseIds) {
+      const char = characterMap.get(id);
+      if (char) {
+        const spouseLabels = char.spouses.filter(s => !activeIds.has(s.id)); // ghost spouses
+        if (spouseLabels.length > 0) {
+          const spousePos = positions.get(id);
+          if (spousePos) {
+            const groupHeight = spouseLabels.length * 36;
+            if (layoutDir === 'vertical') {
+              minY = Math.min(minY, spousePos.y - groupHeight - 12);
+            } else {
+              minX = Math.min(minX, spousePos.x - 220);
+            }
+          }
+        }
+      }
+    }
+
+    const padding = 45;
+    const headerHeight = 35;
+    const margin = 80;
+
+    const groupMinX = minX - padding;
+    const groupMaxX = maxX + padding;
+    const groupMinY = minY - padding - headerHeight;
+    const groupMaxY = maxY + padding;
+
+    // Resolve overlaps by shifting non-house positions
+    if (layoutDir === 'horizontal') {
+      // Columns are aligned by X. We shift Y (vertically).
+      const nonHouseIds = Array.from(positions.keys()).filter(id => {
+        const c = characterMap.get(id);
+        return c?.house?.trim().toLowerCase() !== house.toLowerCase();
+      });
+      
+      // Group non-house by their X coordinate
+      const cols = new Map<number, string[]>();
+      for (const id of nonHouseIds) {
+        const pos = positions.get(id)!;
+        if (!cols.has(pos.x)) cols.set(pos.x, []);
+        cols.get(pos.x)!.push(id);
+      }
+
+      for (const [x, ids] of cols.entries()) {
+        // If this column overlaps with the group X-range
+        if (x >= groupMinX && x <= groupMaxX) {
+          // Sort ids by Y
+          ids.sort((a, b) => positions.get(a)!.y - positions.get(b)!.y);
+          
+          let cumulativeShift = 0;
+          for (const id of ids) {
+            const pos = positions.get(id)!;
+            let currentY = pos.y + cumulativeShift;
+            
+            // If the node overlaps Y-range
+            if (currentY >= groupMinY - margin && currentY <= groupMaxY + margin) {
+              const newY = groupMaxY + margin;
+              cumulativeShift += (newY - currentY);
+              currentY = newY;
+            }
+            
+            if (cumulativeShift > 0) {
+              positions.set(id, { x: pos.x, y: currentY });
+            }
+          }
+        }
+      }
+    } else {
+      // VERTICAL layout: rows are aligned by Y. We shift X (horizontally).
+      const nonHouseIds = Array.from(positions.keys()).filter(id => {
+        const c = characterMap.get(id);
+        return c?.house?.trim().toLowerCase() !== house.toLowerCase();
+      });
+      
+      // Group non-house by their Y coordinate
+      const rows = new Map<number, string[]>();
+      for (const id of nonHouseIds) {
+        const pos = positions.get(id)!;
+        if (!rows.has(pos.y)) rows.set(pos.y, []);
+        rows.get(pos.y)!.push(id);
+      }
+
+      for (const [y, ids] of rows.entries()) {
+        // If this row overlaps with the group Y-range
+        if (y >= groupMinY && y <= groupMaxY) {
+          // Sort ids by X
+          ids.sort((a, b) => positions.get(a)!.x - positions.get(b)!.x);
+          
+          let cumulativeShift = 0;
+          for (const id of ids) {
+            const pos = positions.get(id)!;
+            let currentX = pos.x + cumulativeShift;
+            
+            // If the node overlaps X-range
+            if (currentX >= groupMinX - margin && currentX <= groupMaxX + margin) {
+              const newX = groupMaxX + margin;
+              cumulativeShift += (newX - currentX);
+              currentX = newX;
+            }
+            
+            if (cumulativeShift > 0) {
+              positions.set(id, { x: currentX, y: pos.y });
+            }
+          }
+        }
+      }
+    }
+  }
+
   // 7. Build spouse label groups (childless active spouses + ghost spouses)
   const nodes: Node[] = [];
   const groupedSpouseIds = new Set<string>();
@@ -283,6 +422,65 @@ export function calculateLayout(
       autoSize: false,
       data: char
     });
+  }
+
+  // 7.5 Group other houses under group nodes dynamically
+  for (const house of housesToGroup) {
+    const houseNorm = house.trim();
+    const houseNodes = nodes.filter(
+      n => n.data && (n.data as any).house?.trim().toLowerCase() === houseNorm.toLowerCase()
+    );
+
+    if (houseNodes.length > 0) {
+      const padding = 45;
+      const headerHeight = 35;
+      const groupId = `${houseNorm.toLowerCase().replace(/\s+/g, '-')}-group`;
+
+      let minX = Infinity;
+      let minY = Infinity;
+      let maxX = -Infinity;
+      let maxY = -Infinity;
+
+      for (const n of houseNodes) {
+        const x = n.position.x;
+        const y = n.position.y;
+        const w = n.size?.width ?? nodeWidth;
+        const h = n.size?.height ?? nodeHeight;
+
+        if (x < minX) minX = x;
+        if (y < minY) minY = y;
+        if (x + w > maxX) maxX = x + w;
+        if (y + h > maxY) maxY = y + h;
+      }
+
+      const groupNode: Node = {
+        id: groupId,
+        type: 'group',
+        isGroup: true,
+        position: {
+          x: minX - padding,
+          y: minY - padding - headerHeight
+        },
+        size: {
+          width: maxX - minX + 2 * padding,
+          height: maxY - minY + 2 * padding + headerHeight
+        },
+        autoSize: false,
+        data: {
+          id: groupId,
+          title: `House ${houseNorm}`,
+          house: houseNorm
+        } as any
+      };
+
+      // Assign groupId to children
+      for (const n of houseNodes) {
+        (n as any).groupId = groupId;
+      }
+
+      // Insert group node at the beginning of the nodes array so it renders behind the child nodes
+      nodes.unshift(groupNode);
+    }
   }
 
   // 8. Build edges

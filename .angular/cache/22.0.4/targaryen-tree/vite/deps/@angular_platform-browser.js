@@ -1,40 +1,28 @@
 import {
   withHttpTransferCache
-} from "./chunk-2JCSR5RX.js";
+} from "./chunk-KYETK75A.js";
 import {
   CommonModule,
   PLATFORM_BROWSER_ID
-} from "./chunk-XV5SVP7N.js";
+} from "./chunk-GWPCHIMB.js";
 import {
   DomAdapter,
   getDOM,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-VC3KO7XZ.js";
+} from "./chunk-RUT4XS34.js";
 import {
   APP_BOOTSTRAP_LISTENER,
-  APP_ID,
   ApplicationModule,
   ApplicationRef,
-  CACHE_ACTIVE,
-  CSP_NONCE,
   Console,
-  DOCUMENT,
-  ENVIRONMENT_INITIALIZER,
-  ErrorHandler,
-  INJECTOR_SCOPE,
   IS_ENABLED_BLOCKING_INITIAL_NAVIGATION,
   Inject,
   Injectable,
-  InjectionToken,
   NgModule,
-  NgZone,
   Optional,
-  PLATFORM_ID,
-  PLATFORM_INITIALIZER,
   RendererFactory2,
   RendererStyleFlags2,
-  RuntimeError,
   SHARED_STYLES_HOST,
   SecurityContext,
   Service,
@@ -44,10 +32,7 @@ import {
   TestabilityRegistry,
   TracingService,
   USE_PENDING_TASKS,
-  Version,
   ViewEncapsulation,
-  XSS_SECURITY_URL,
-  _global,
   _sanitizeHtml,
   _sanitizeUrl,
   allLeavingAnimations,
@@ -58,11 +43,7 @@ import {
   bypassSanitizationTrustStyle,
   bypassSanitizationTrustUrl,
   createPlatformFactory,
-  formatRuntimeError,
-  forwardRef,
-  inject,
   internalCreateApplication,
-  makeEnvironmentProviders,
   platformCore,
   provideStabilityDebugging,
   setClassMetadata,
@@ -72,14 +53,35 @@ import {
   withEventReplay,
   withI18nSupport,
   withIncrementalHydration,
+  ɵɵdefineNgModule,
+  ɵɵdefineService
+} from "./chunk-ZGKELGVK.js";
+import {
+  APP_ID,
+  CACHE_ACTIVE,
+  CSP_NONCE,
+  DOCUMENT,
+  ENVIRONMENT_INITIALIZER,
+  ErrorHandler,
+  INJECTOR_SCOPE,
+  InjectionToken,
+  NgZone,
+  PLATFORM_ID,
+  PLATFORM_INITIALIZER,
+  RuntimeError,
+  Version,
+  XSS_SECURITY_URL,
+  _global,
+  formatRuntimeError,
+  forwardRef,
+  inject,
+  makeEnvironmentProviders,
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
-  ɵɵdefineNgModule,
-  ɵɵdefineService,
   ɵɵinject
-} from "./chunk-UXIW3HKQ.js";
-import "./chunk-J46EEYGT.js";
+} from "./chunk-COPXD2BJ.js";
 import "./chunk-4YCCEXQQ.js";
+import "./chunk-J46EEYGT.js";
 import {
   __spreadValues
 } from "./chunk-U7EDC2PH.js";
