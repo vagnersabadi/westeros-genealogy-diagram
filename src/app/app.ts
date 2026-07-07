@@ -145,8 +145,8 @@ export class App {
 
     const { nodes, edges } = calculateLayout(
       characters,
-      220,
-      80,
+      290,
+      98,
       160,
       80,
       40,
