@@ -49,10 +49,12 @@ import { CharacterService } from '../../core/services/character.service';
 
       .filters {
         margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
       }
 
       .filters button {
-        margin-right: 10px;
         padding: 8px 16px;
         background-color: #c89b3c;
         color: white;
@@ -89,7 +91,8 @@ import { CharacterService } from '../../core/services/character.service';
       .character-card img {
         width: 100%;
         height: 200px;
-        object-fit: cover;
+        object-fit: contain;
+        background-color: #1a0e0e;
         border-radius: 4px;
         margin-bottom: 10px;
       }

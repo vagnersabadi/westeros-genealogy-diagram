@@ -279,7 +279,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/4/41/Vaella_Targaryen_by_RLandH.jpg/300px-Vaella_Targaryen_by_RLandH.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Vaella_Targaryen_(daughter_of_Aenys_I)",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "aenys-i",
         "alyssa-velaryon"

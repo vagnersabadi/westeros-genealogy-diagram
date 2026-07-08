@@ -286,6 +286,48 @@
   &--tyrell { background: #3c9c3c; }
 }
 
+/* View mode toggle */
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  padding: 4px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.view-toggle__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  color: #8c7a6a;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #f1e6d0;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #4a1212 0%, #2b0b0b 100%);
+    border-color: #8a1d1d;
+    color: #ffd880;
+    box-shadow: 0 2px 12px rgba(74, 18, 18, 0.3);
+  }
+}
+
 /* Diagram Viewport Container */
 .diagram-container {
   flex: 1 1 auto;

@@ -19,6 +19,7 @@ import { CharacterNode } from './features/diagram/components/character-node/char
 import { GroupNodeComponent } from './features/diagram/components/group-node/group-node';
 import { RelationshipEdge } from './features/diagram/components/relationship-edge/relationship-edge';
 import { calculateLayout } from './core/utils/layout.engine';
+import { CharactersListComponent } from './features/characters-list/characters-list.component';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +29,8 @@ import { calculateLayout } from './core/utils/layout.engine';
     NgDiagramComponent,
     NgDiagramBackgroundComponent,
     NgDiagramMinimapComponent,
-    NgClass
+    NgClass,
+    CharactersListComponent
   ],
   providers: [provideNgDiagram()],
   templateUrl: './app.html',
@@ -91,6 +93,13 @@ export class App {
 
   // Layout direction state — default is vertical
   layoutDirection = signal<'horizontal' | 'vertical'>('vertical');
+
+  // View mode — 'tree' shows the diagram, 'list' shows the characters list
+  viewMode = signal<'tree' | 'list'>('tree');
+
+  setViewMode(mode: 'tree' | 'list') {
+    this.viewMode.set(mode);
+  }
 
   // Selected relationship details for global popup
   selectedEdgeId = signal<string | null>(null);

@@ -72,9 +72,30 @@
           House {{ house }}
         </button>
       }
+
+      <!-- View mode toggle -->
+      <div class="view-toggle">
+        <button
+          class="view-toggle__btn"
+          [class.active]="viewMode() === 'tree'"
+          (click)="setViewMode('tree')"
+        >
+          🌳 Árvore
+        </button>
+        <button
+          class="view-toggle__btn"
+          [class.active]="viewMode() === 'list'"
+          (click)="setViewMode('list')"
+        >
+          📋 Lista
+        </button>
+      </div>
     </nav>
 
     <div class="diagram-container">
+      @if (viewMode() === 'list') {
+        <app-characters-list />
+      } @else {
       <ng-diagram 
         [model]="model()" 
         [nodeTemplateMap]="nodeTemplateMap"
@@ -236,6 +257,7 @@
             </div>
           </aside>
         </div>
+      }
       }
     </div>
   </main>
