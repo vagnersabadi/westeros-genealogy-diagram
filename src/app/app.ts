@@ -62,6 +62,23 @@ export class App {
     return [character.imageUrl, ...extraImages].filter(Boolean);
   });
 
+  spousesWithoutChildren = computed(() => {
+    const character = this.selectedCharacter();
+    const allChars = this.characters();
+    if (!character) return [];
+
+    const children = allChars.filter(c => c.parents?.includes(character.id));
+    const spousesWithChildrenIds = new Set<string>();
+    for (const child of children) {
+      const otherParent = child.parents?.find(pId => pId !== character.id);
+      if (otherParent) {
+        spousesWithChildrenIds.add(otherParent);
+      }
+    }
+
+    return character.spouses?.filter(spouse => !spousesWithChildrenIds.has(spouse.id)) ?? [];
+  });
+
   constructor() {}
 
   // Register node and edge templates

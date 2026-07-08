@@ -232,6 +232,20 @@
                     <span class="character-drawer__value">{{ images.length }}</span>
                   </div>
                 </div>
+
+                @if (spousesWithoutChildren().length > 0) {
+                  <div class="character-drawer__section">
+                    <span class="character-drawer__label">Esposas/Companheiras (Sem filhos na árvore)</span>
+                    <div class="character-drawer__spouses-list">
+                      @for (spouse of spousesWithoutChildren(); track spouse.id) {
+                        <div class="character-drawer__spouse-tag">
+                          <span class="spouse-dot" [style.backgroundColor]="spouse.corTexto"></span>
+                          <span class="spouse-name">{{ spouse.nome }}</span>
+                        </div>
+                      }
+                    </div>
+                  </div>
+                }
               </div>
 
               <div class="character-drawer__actions">

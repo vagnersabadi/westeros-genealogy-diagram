@@ -113,9 +113,33 @@ export function calculateLayout(
 
   const maxDepth = generations.size > 0 ? Math.max(...generations.keys()) : 0;
 
-  // 6. Position nodes — VERTICAL layout:
-  //    x = generation column (depth * horizontalGap)
-  //    y = position within column (sibling index * verticalGap)
+  // Helpers to calculate space required for childless spouses
+  const getChildlessSpousesHeight = (charId: string): number => {
+    const char = characterMap.get(charId);
+    if (!char) return 0;
+    
+    const activeChildless = characters.filter(s =>
+      childlessSpouses.has(s.id) &&
+      (char.spouses.some(sp => sp.id === s.id) || s.spouses.some(sp => sp.id === char.id))
+    );
+    const ghosts = ghostSpouses(char);
+    const count = activeChildless.length + ghosts.length;
+    return count > 0 ? count * 36 + 12 : 0; // 36px per spouse + 12px gap
+  };
+
+  const getChildlessSpousesWidth = (charId: string): number => {
+    const char = characterMap.get(charId);
+    if (!char) return 0;
+    
+    const activeChildless = characters.filter(s =>
+      childlessSpouses.has(s.id) &&
+      (char.spouses.some(sp => sp.id === s.id) || s.spouses.some(sp => sp.id === char.id))
+    );
+    const ghosts = ghostSpouses(char);
+    return (activeChildless.length + ghosts.length) > 0 ? 220 : 0;
+  };
+
+  // 6. Position nodes
   const positions = new Map<string, { x: number; y: number }>();
 
   for (let g = 0; g <= maxDepth; g++) {
@@ -164,45 +188,99 @@ export function calculateLayout(
     if (layoutDir === 'vertical') {
       // VERTICAL: x = generation column, y = stack within column
       const x = g * (nodeWidth + horizontalGap);
-      const heights = items.map(item =>
-        item.type === 'couple' ? nodeHeight * 2 + spouseGap : nodeHeight
-      );
-      const totalHeight = heights.reduce((s, h) => s + h, 0) + (items.length - 1) * verticalGap;
-      let startY = 400 - totalHeight / 2;
-
-      for (let i = 0; i < items.length; i++) {
-        const item = items[i];
+      
+      const itemProfiles = items.map(item => {
         if (item.type === 'couple') {
           const [id1, id2] = item.ids;
-          positions.set(id1, { x, y: startY });
-          positions.set(id2, { x, y: startY + nodeHeight + spouseGap });
-          startY += nodeHeight * 2 + spouseGap + verticalGap;
+          const h1 = getChildlessSpousesHeight(id1);
+          const h2 = getChildlessSpousesHeight(id2);
+          const gap = Math.max(spouseGap, h2);
+          const totalHeight = h1 + nodeHeight + gap + nodeHeight;
+          return {
+            type: 'couple' as const,
+            ids: [id1, id2],
+            h1,
+            gap,
+            totalHeight
+          };
         } else {
           const [id] = item.ids;
-          positions.set(id, { x, y: startY });
-          startY += nodeHeight + verticalGap;
+          const h = getChildlessSpousesHeight(id);
+          const totalHeight = h + nodeHeight;
+          return {
+            type: 'single' as const,
+            ids: [id],
+            h,
+            totalHeight
+          };
+        }
+      });
+
+      const totalHeight = itemProfiles.reduce((s, p) => s + p.totalHeight, 0) + (items.length - 1) * verticalGap;
+      let startY = 400 - totalHeight / 2;
+
+      for (const profile of itemProfiles) {
+        if (profile.type === 'couple') {
+          const [id1, id2] = profile.ids;
+          const card1Y = startY + profile.h1;
+          const card2Y = card1Y + nodeHeight + profile.gap;
+          positions.set(id1, { x, y: card1Y });
+          positions.set(id2, { x, y: card2Y });
+          startY += profile.totalHeight + verticalGap;
+        } else {
+          const [id] = profile.ids;
+          const cardY = startY + profile.h;
+          positions.set(id, { x, y: cardY });
+          startY += profile.totalHeight + verticalGap;
         }
       }
     } else {
       // HORIZONTAL: y = generation row, x = spread within row
       const y = g * verticalGap;
-      const widths = items.map(item =>
-        item.type === 'couple' ? nodeWidth * 2 + spouseGap : nodeWidth
-      );
-      const totalWidth = widths.reduce((s, w) => s + w, 0) + (items.length - 1) * horizontalGap;
-      let startX = 600 - totalWidth / 2;
-
-      for (let i = 0; i < items.length; i++) {
-        const item = items[i];
+      
+      const itemProfiles = items.map(item => {
         if (item.type === 'couple') {
           const [id1, id2] = item.ids;
-          positions.set(id1, { x: startX, y });
-          positions.set(id2, { x: startX + nodeWidth + spouseGap, y });
-          startX += nodeWidth * 2 + spouseGap + horizontalGap;
+          const w1 = getChildlessSpousesWidth(id1);
+          const w2 = getChildlessSpousesWidth(id2);
+          const gap = Math.max(spouseGap, w2);
+          const totalWidth = w1 + nodeWidth + gap + nodeWidth;
+          return {
+            type: 'couple' as const,
+            ids: [id1, id2],
+            w1,
+            gap,
+            totalWidth
+          };
         } else {
           const [id] = item.ids;
-          positions.set(id, { x: startX, y });
-          startX += nodeWidth + horizontalGap;
+          const w = getChildlessSpousesWidth(id);
+          const totalWidth = w + nodeWidth;
+          return {
+            type: 'single' as const,
+            ids: [id],
+            w,
+            totalWidth
+          };
+        }
+      });
+
+      const totalWidth = itemProfiles.reduce((s, p) => s + p.totalWidth, 0) + (items.length - 1) * horizontalGap;
+      let startX = 600 - totalWidth / 2;
+
+      for (const profile of itemProfiles) {
+        if (profile.type === 'couple') {
+          const [id1, id2] = profile.ids;
+          const card1X = startX + profile.w1;
+          const card2X = card1X + nodeWidth + profile.gap;
+          positions.set(id1, { x: card1X, y });
+          positions.set(id2, { x: card2X, y });
+          startX += profile.totalWidth + horizontalGap;
+        } else {
+          const [id] = profile.ids;
+          const cardX = startX + profile.w;
+          positions.set(id, { x: cardX, y });
+          startX += profile.totalWidth + horizontalGap;
         }
       }
     }
