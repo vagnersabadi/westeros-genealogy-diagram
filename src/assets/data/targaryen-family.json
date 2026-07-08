@@ -38,7 +38,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/d/de/Visenya.jpg/350px-Visenya.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Visenya_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [],
       "spouses": [
         {
@@ -57,7 +57,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/82/Rhaenys.jpg/350px-Rhaenys.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaenys_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [],
       "spouses": [
         {
@@ -164,7 +164,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/9/90/Aegon_the_Uncrowned_and_Rhaena_by_Lopata_Four.jpg/350px-Aegon_the_Uncrowned_and_Rhaena_by_Lopata_Four.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Targaryen_(son_of_Aenys_I)",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "aenys-i",
         "alyssa-velaryon"
@@ -189,7 +189,7 @@
       ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaena_Targaryen_(daughter_of_Aenys_I)",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "alyssa-velaryon"
       ],
@@ -213,7 +213,7 @@
       ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Alysanne_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "aenys-i",
         "alyssa-velaryon"
@@ -596,7 +596,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/e/e7/Aemma_Arryn_by_ildraws.jpg/350px-Aemma_Arryn_by_ildraws.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemma_Arryn",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [],
       "spouses": [
         {
@@ -618,7 +618,7 @@
       ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Alicent_Hightower",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "otto-hightower"
       ],
@@ -719,7 +719,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/1/1e/House_Targaryen.svg/50px-House_Targaryen.svg.png",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelon_Targaryen_(son_of_Viserys_I)",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "viserys-i-king",
         "aemma-arryn"
@@ -766,7 +766,7 @@
       ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Helaena_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "viserys-i-king",
         "alicent-hightower"
@@ -788,7 +788,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/thumb/9/9b/Daeron_the_Daring_by_Lopata4.jpg/350px-Daeron_the_Daring_by_Lopata4.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Daeron_Targaryen_(son_of_Viserys_I)",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "viserys-i-king",
         "alicent-hightower"
@@ -807,7 +807,7 @@
       ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemond_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "viserys-i-king",
         "alicent-hightower"
@@ -1128,7 +1128,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/2/26/Daena.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Daena_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "aegon-targaryen-iii",
         "daenaera-velaryon"
@@ -1198,7 +1198,7 @@
       "imageUrl": "https://awoiaf.westeros.org/images/9/90/Naerys.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Naerys_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "viserys-ii-targaryen",
         "larra-rogare"
@@ -1501,7 +1501,7 @@
       "imageUrl": "https://awoiaf.westeros.org/index.php/File:Shaera_Targaryen.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Shaera_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "maekar-i-targaryen",
         "dyanna-dayne"
@@ -1585,7 +1585,7 @@
       "imageUrl": "https://awoiaf.westeros.org/index.php/File:Rhaella_Targaryen.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaella_Targaryen",
       "isBastard": false,
-      "isKingOrQueen": true,
+      "isKingOrQueen": false,
       "parents": [
         "jaehaerys-ii-targaryen",
         "shaera-targaryen"
