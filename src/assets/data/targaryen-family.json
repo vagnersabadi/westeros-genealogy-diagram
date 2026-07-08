@@ -1266,8 +1266,73 @@
       "title": "Haegon Blackfyre",
       "house": "Blackfyre",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Haegon_Blackfyre.jpg",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/89/Haegon_Blackfyre_by_Riotarttherite.jpg/350px-Haegon_Blackfyre_by_Riotarttherite.jpg",
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Haegon_Blackfyre",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
+      "spouses": []
+    },
+    {
+      "id": "aegon-blackfyre",
+      "name": "Aegon Blackfyre",
+      "title": "Aegon Blackfyre",
+      "house": "Blackfyre",
+      "gender": "male",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/0/03/Aegon_Blackfyre_by_Riotarttherite.jpg/350px-Aegon_Blackfyre_by_Riotarttherite.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aegon_Blackfyre",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
+      "spouses": []
+    },
+    {
+      "id": "aemon-blackfyre",
+      "name": "Aemon Blackfyre",
+      "title": "Aemon Blackfyre",
+      "house": "Blackfyre",
+      "gender": "male",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/8/8d/Aemon_Blackfyre_by_Riotarttherite.jpg/350px-Aemon_Blackfyre_by_Riotarttherite.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aemon_Blackfyre",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
+      "spouses": []
+    },
+    {
+      "id": "daemon-blackfyre-ii",
+      "name": "Daemon Blackfyre II",
+      "title": "Daemon Blackfyre II",
+      "house": "Blackfyre",
+      "gender": "male",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/7/70/John_the_Fiddler_by_Naomi.jpg/350px-John_the_Fiddler_by_Naomi.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Daemon_II_Blackfyre",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
+      "spouses": []
+    },
+    {
+      "id": "aenys-blackfyre",
+      "name": "Aenys Blackfyre",
+      "title": "Aenys Blackfyre",
+      "house": "Blackfyre",
+      "gender": "male",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/3/32/Aenys_Blackfyre_by_Riotarttherite.jpg/350px-Aenys_Blackfyre_by_Riotarttherite.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aenys_Blackfyre",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
+      "spouses": []
+    },
+    {
+      "id": "calla-blackfyre",
+      "name": "Calla Blackfyre",
+      "title": "Calla Blackfyre",
+      "house": "Blackfyre",
+      "gender": "female",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/f/fe/Calla_Blackfyre_by_Riotarttherite.jpg/350px-Calla_Blackfyre_by_Riotarttherite.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Calla_Blackfyre",
       "isBastard": false,
       "isKingOrQueen": false,
       "parents": ["daemon-blackfyre", "rohanne-of-tyrosh"],
@@ -1279,8 +1344,12 @@
       "title": "Prince Baelor (Breakspear)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Baelor_Targaryen.jpg",
-      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelor_Targaryen",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/2/21/Baelor_Breakspear_by_Jaenarra.png/350px-Baelor_Breakspear_by_Jaenarra.png",
+      "imagesList": [
+        "https://static.wikia.nocookie.net/gameofthrones/images/b/b5/Baelor_Breakspear-AKotSK.png/revision/latest/scale-to-width-down/268?cb=20260223232300",
+        "https://static.wikia.nocookie.net/gameofthrones/images/d/dc/Fingers_feel_like_wood.jpg/revision/latest?cb=20260217091438"
+      ],
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Baelor_Targaryen_(son_of_Daeron_II)",
       "isBastard": false,
       "isKingOrQueen": false,
       "parents": ["daeron-ii-targaryen", "myriah-martell"],
@@ -1298,8 +1367,8 @@
       "title": "King Aerys I (The Bookish)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Aerys_Targaryen.jpg",
-      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aerys_Targaryen",
+      "imageUrl": "https://awoiaf.westeros.org/images/8/80/AERYS_I.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Aerys_I_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
       "parents": ["daeron-ii-targaryen", "myriah-martell"],
@@ -1317,7 +1386,11 @@
       "title": "King Maekar I (The Anvil)",
       "house": "Targaryen",
       "gender": "male",
-      "imageUrl": "https://awoiaf.westeros.org/index.php/File:Maekar_Targaryen.jpg",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/4/4f/Maekar_Targaryen_by_Amok.jpg/350px-Maekar_Targaryen_by_Amok.jpg",
+      "imagesList": [
+        "https://static.wikia.nocookie.net/gameofthrones/images/3/3a/Maekar-Seven.jpg/revision/latest?cb=20260204115453",
+        "https://static.wikia.nocookie.net/gameofthrones/images/0/0d/AKOTSK_Maekar_Still.jpg/revision/latest?cb=20251222110633"
+      ],
       "wikiUrl": "https://awoiaf.westeros.org/index.php/Maekar_Targaryen",
       "isBastard": false,
       "isKingOrQueen": true,
@@ -1329,6 +1402,19 @@
           "corTexto": "#d4a0a0"
         }
       ]
+    },
+    {
+      "id": "rhaegel-targaryen",
+      "name": "Rhaegel Targaryen",
+      "title": "Prince Rhaegel",
+      "house": "Targaryen",
+      "gender": "male",
+      "imageUrl": "https://awoiaf.westeros.org/images/thumb/9/91/Rhaegel_Targaryen_by_Riotarttherite.jpg/350px-Rhaegel_Targaryen_by_Riotarttherite.jpg",
+      "wikiUrl": "https://awoiaf.westeros.org/index.php/Rhaegel_Targaryen",
+      "isBastard": false,
+      "isKingOrQueen": false,
+      "parents": ["daeron-ii-targaryen", "myriah-martell"],
+      "spouses": []
     }
   ],
   "Geração 11": [
